@@ -59,9 +59,9 @@
   \newfontfamily{\heiti@letter}{STHeiti}
   \setallmainfonts{Times New Roman}
 \else
-  \setCJKmainfont[AutoFakeBold=true]{fzsong.ttf}
-  \newCJKfontfamily{\heiti}{fzhei.ttf}
-  \newfontfamily{\heiti@letter}{fzhei.ttf}
+  \setCJKmainfont[AutoFakeBold=true]{SimSun}
+  \newCJKfontfamily{\heiti}{SimHei}
+  \newfontfamily{\heiti@letter}{SimHei}
   \setallmainfonts[
     BoldFont=timesbd.ttf,
     ItalicFont=timesi.ttf,
@@ -392,7 +392,7 @@
 \newcommand{\thedatesubmit}{}
 \newcommand{\thedateconfer}{年\chinesespace 月}
 
-\newcommand{\setdate}[2][]{ 
+\newcommand{\setdate}[2][]{
 \ifthenelse{\equal{#1}{oral}}{
   \renewcommand{\thedateoral}{#2}
 }{}
@@ -446,7 +446,7 @@
   \def\chinesebooktitle{专业学位硕士学位论文}
   \def\englishbooktitle{Master Thesis for Professional Degree}
   \def\display@chineseheader{电子科技大学硕士学位论文}
-  \def\display@englishheader{Professional Master Thesis of University 
+  \def\display@englishheader{Professional Master Thesis of University
     of Electronic Science and Technology of China}
 }
 
@@ -507,7 +507,7 @@
   \fancyhf{}
   \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont\listtablename}
   \fancyfoot[CE,CO]{\fontsize{9pt}{10.8pt}\selectfont\Roman{pseudopage}}
-  
+
   \ifchinesebook{
     \addtolength{\cfttabnumwidth}{12pt}
     \renewcommand{\cfttabpresnum}{\tablename}
@@ -594,7 +594,7 @@
 }
 
 \newcommand{\thesisglossarylist}{
-  \newpage 
+  \newpage
   \fancyhf{}
   \ifchinesebook{
     \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont 缩略词表}
@@ -957,9 +957,9 @@ School: & \en@theschool \\
   }{
     \renewcommand{\appendixname}{Appendix}
   }
-  
+
   \renewcommand{\thesection}{A.\arabic{section}}
-  
+
   \renewcommand{\theequation}{a-\arabic{equation}}
   \renewcommand{\thetable}{a-\arabic{table}}
   \renewcommand{\thefigure}{a-\arabic{figure}}
@@ -969,7 +969,7 @@ School: & \en@theschool \\
   \renewcommand{\thelemma}{a.\arabic{lemma}}
   \renewcommand{\thedefinition}{a.\arabic{definition}}
   \renewcommand{\theexample}{a.\arabic{example}}
-  
+
   \ifchinesebook{
     \chapter*{附\hspace{12pt}录}
     \addcontentsline{toc}{chapter}{附录}
@@ -998,7 +998,7 @@ School: & \en@theschool \\
     \addcontentsline{toc}{chapter}{\translation@originaltitle}
     \markboth{\translation@originaltitle}{\translation@originaltitle}
     \thispagestyle{fancy}
-    \hypersetup{bookmarksdepth=0} 
+    \hypersetup{bookmarksdepth=0}
     \renewcommand{\theequation}{\arabic{equation}}
     \renewcommand{\thetable}{\arabic{table}}
     \renewcommand{\thefigure}{\arabic{figure}}
@@ -1015,7 +1015,7 @@ School: & \en@theschool \\
     \addcontentsline{toc}{chapter}{\translation@chinesetitle}
     \markboth{\translation@chinesetitle}{\translation@chinesetitle}
     \thispagestyle{fancy}
-    \hypersetup{bookmarksdepth=0} 
+    \hypersetup{bookmarksdepth=0}
     \renewcommand{\theequation}{\arabic{equation}}
     \renewcommand{\thetable}{\arabic{table}}
     \renewcommand{\thefigure}{\arabic{figure}}
