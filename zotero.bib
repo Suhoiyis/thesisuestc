@@ -317,6 +317,25 @@ filename: 1025022951.nh},
   file = {/home/yua/Zotero/storage/SRADTYEK/胡文蓉 - 2025 - 基于数据增强和深度神经网络的癫痫检测研究.pdf}
 }
 
+@article{liaoEEGDataAugmentation2025,
+  title = {{{EEG}} Data Augmentation Method Based on the Gaussian Mixture Model},
+  author = {Liao, Chuncheng and Zhao, Shiyu and Wang, Xiangcun and Zhang, Jiacai and Liao, Yongzhong and Wu, Xia},
+  date = {2025-02-24},
+  journaltitle = {Mathematics},
+  shortjournal = {Mathematics},
+  volume = {13},
+  number = {5},
+  pages = {729--751},
+  issn = {2227-7390},
+  doi = {10.3390/math13050729},
+  url = {https://www.mdpi.com/2227-7390/13/5/729},
+  urldate = {2025-12-21},
+  abstract = {Traditional EEG data augmentation methods may alter the spatiotemporal characteristic distribution of brain electrical signals. This paper proposes a new method based on the Gaussian Mixture Model (GMM): First, we use the GMM to decompose data samples of the same category to obtain Gaussian coefficients and take the product of the probability coefficient and the weight matrix as the feature matrix. Then, we randomly select two EEG feature matrices and determine the similarity based on the magnitude of the correlation coefficients of their column vectors and exchange columns exceeding the threshold to obtain a new matrix. Finally, we generate new data according to the new matrix, as well as its mean and variance. Experiments on public datasets show that this method effectively retains the original data’s spatiotemporal and distribution characteristics. In classification model tests, compared with the original data without augmentation, the classification accuracy is improved by up to 29.84\%. The t-SNE visualization results show that the generated data are more compact. This method can create a large number of new EEG signals similar to the original data in terms of spatiotemporal characteristics, improve classification accuracy, and enhance the performance of Brain–Computer Interface (BCI) systems.},
+  langid = {english},
+  annotation = {TLDR: A new method based on the Gaussian Mixture Model (GMM) that can create a large number of new EEG signals similar to the original data in terms of spatiotemporal characteristics, improve classification accuracy, and enhance the performance of Brain–Computer Interface (BCI) systems is proposed.},
+  file = {/home/yua/Zotero/storage/FI8QZNKC/Liao 等 - 2025 - EEG Data Augmentation Method Based on the Gaussian Mixture Model.pdf}
+}
+
 @thesis{LiChuYangJiYuZiJianDuXueXiDeNaoDianTuLuBangFenLeiYanJiu,
   type = {硕士学位论文},
   title = {基于自监督学习的脑电图鲁棒分类研究},
@@ -339,6 +358,32 @@ dbcode: CMFD\\
 dbname: CMFDTEMP\\
 filename: 1025739534.nh},
   file = {/home/yua/Zotero/storage/7MQ64RVN/李楚阳 - 基于自监督学习的脑电图鲁棒分类研究.pdf}
+}
+
+@thesis{LiChuYangJiYuZiJianDuXueXiDeNaoDianTuLuBangFenLeiYanJiu2025,
+  type = {硕士学位论文},
+  title = {基于自监督学习的脑电图鲁棒分类研究},
+  author = {{李楚阳}},
+  namea = {{李修成}},
+  nameatype = {collaborator},
+  date = {2025-05-01},
+  journaltitle = {医药卫生科技;信息科技},
+  institution = {哈尔滨工业大学},
+  location = {哈尔滨},
+  doi = {10.27061/d.cnki.ghgdu.2025.004375},
+  url = {https://doi.org/10.27061/d.cnki.ghgdu.2025.004375},
+  urldate = {2025-12-21},
+  abstract = {脑电图(EEG)作为一种非侵入性的神经生理检测技术,以其毫秒级时间分辨率在如癫痫检测中具有不可替代的价值。然而,在实际临床环境中,EEG分类模型普遍会受到由噪声和预处理不一致导致的数据分布偏移的影响,部署时常出现性能退化问题。同时,专业标注的稀缺性进一步限制了传统监督学习方法在EEG分类任务中的应用,模型难以充分挖掘数据潜在模式。亟需开发鲁棒性强、适应性高的分类模型以应对真实医疗场景挑战。 基于上述背景,本研究提出了一种面向脑电时序建模的鲁棒预训练框架,旨在解决EEG信号处理中标签稀缺性和数据分布偏移的双重困境。研究动机源于现有自监督学习方法对缺少对噪声模式的判别、忽略时频通道关系鲁棒性差异以及时频特征利用不充分的问题。为此,本研究创新性地融合了额外噪声负样本对比学习、跨域重构与通道对齐三大技术,构建多任务联合优化的预训练架构。额外噪声负样本对比学习通过引入额外噪声负样本,显式建模噪声分布特征,增强模型对干扰模式的辨识能力;跨域重构任务设计时域到频域及频域到时域的双向映射机制,实现时频特征深度融合,避免单一域内信息损失;通道对齐策略利用频域通道关系的稳定性校正时域表征偏移,进一步提升对数据偏移的鲁棒性。实验在天普大学医院脑电图数据集的癫痫发作检测与异常分类任务上进行,涵盖多种噪声和偏移条件下的性能评估。实验表明,本框架在原始数据及数据偏移环境下均显著优于现有自监督和监督学习基准方法,尤其对带通滤波导致的分布偏移展现出卓越鲁棒性,性能下降幅度最小。本研究首次将噪声显式建模引入时间序列对比学习,建立了时频特征交互与通道校准机制,为EEG信号鲁棒分类提供了新视角与实践方案,对推动脑机接口、神经疾病诊断等领域的智能化应用具有重要理论价值与临床意义。 此外,本研究进一步探索了基于残差混合的对比学习增强方法,旨在通过在嵌入空间内实施残差混合操作,缓解传统数据增强策略多样性不足的局限性,增强模型鲁棒性。研究通过分析监督模型中间层特征偏移分布,发现噪声强度与特征偏移间的潜在关联,并据此设计了嵌入空间残差混合机制以引入语义噪声。尽管实验结果显示该方法在不同模型架构中表现不一,性能提升有限,但明确了残差混合策略的适用边界,揭示了高维嵌入空间特征混合可能引入的语义歧义风险,为后续对比学习优化提供了重要经验参考。},
+  langid = {chinese},
+  pagetotal = {70},
+  keywords = {时间序列分类,脑电图,自监督学习,鲁棒性},
+  annotation = {CLC: TP18;TN911.7;R741.044\\
+dbcode: CMFD\\
+dbname: CMFDTEMP\\
+download: 22\\
+filename: 1025739534.nh\\
+major: 计算机技术（专业学位）},
+  file = {/home/yua/Zotero/storage/9CQJYPN5/李楚阳 - 基于自监督学习的脑电图鲁棒分类研究.pdf}
 }
 
 @article{liGMSSGraphBasedMultiTask2023,
