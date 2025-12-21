@@ -1,0 +1,960 @@
+@software{AddonItem,
+  title = {Addon {{Item}}}
+}
+
+@article{CengYunHanRongHeShiKongJuanJiHeZhuYiLiJiZhiDeNaoDianXinHaoFenLei2025,
+  title = {融合时空卷积和注意力机制的脑电信号分类},
+  author = {{曾韵晗} and {孙洪伟} and {杨玲}},
+  date = {2025},
+  journaltitle = {软件},
+  volume = {46},
+  number = {1},
+  pages = {10--16},
+  issn = {1003-6970},
+  url = {https://kns.cnki.net/kcms2/article/abstract?v=QSPvTk9Jgi1_XApqtr7NH5ZjZsu_-7AFj_HwCUllET53DAgjfk-7dD9qpVMqdD4sLTviHwS4uMdgPFde6PJYqf4NSIGAPkwAHOnalPikHsDYLh57aC3tHzHvAG3EeUqeYU0XchcxxKRfK5gWKZ0suczGdSIfthg4bMqvZL3vBi3UfU-q-DEVksFd2ikuuke0&uniplatform=NZKPT&language=CHS},
+  abstract = {脑电信号受多种因素影响,导致其解码准确率较低。为解决脑电信号识别精度不高的问题,本文提出了一种融合时空卷积和注意力机制的分类模型。该模型结合了紧凑卷积神经网络（EEGNet）在时间和空间特征提取方面的优势,以及时间卷积网络（TCN）在处理时间序列数据上的强大能力。同时,模型引入了注意力机制和基于卷积的滑动窗口技术,以增强对关键特征的识别与利用。在BCICompetitionIV-2a数据集上进行实验,结果表明,该模型的平均分类准确率达到了83.9\%,平均Kappa值为0.79,显著优于现有多种模型。该模型通过有效应对EEG信号的非平稳性和个体差异性,显著提升了运动现象（MI）任务的分类性能。},
+  langid = {chinese},
+  keywords = {卷积神经网络,时间卷积网络,注意力机制,滑动窗口,脑电信号分类,运动想象},
+  file = {/home/yua/Zotero/storage/I4QQWM2P/融合时空卷积和注意力机制的脑电信号分类.pdf}
+}
+
+@inproceedings{cubukAutoAugmentLearningAugmentation2019,
+  title = {{{AutoAugment}}: {{Learning Augmentation Strategies From Data}}},
+  shorttitle = {{{AutoAugment}}},
+  booktitle = {2019 {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and {{Pattern Recognition}} ({{CVPR}})},
+  author = {Cubuk, Ekin D. and Zoph, Barret and Mané, Dandelion and Vasudevan, Vijay and Le, Quoc V.},
+  date = {2019-06},
+  pages = {113--123},
+  publisher = {IEEE},
+  location = {Long Beach, CA, USA},
+  doi = {10.1109/CVPR.2019.00020},
+  url = {https://ieeexplore.ieee.org/document/8953317/},
+  urldate = {2025-11-30},
+  abstract = {Data augmentation is an effective technique for improving the accuracy of modern image classifiers. However, current data augmentation implementations are manually designed. In this paper, we describe a simple procedure called AutoAugment to automatically search for improved data augmentation policies. In our implementation, we have designed a search space where a policy consists of many subpolicies, one of which is randomly chosen for each image in each mini-batch. A sub-policy consists of two operations, each operation being an image processing function such as translation, rotation, or shearing, and the probabilities and magnitudes with which the functions are applied. We use a search algorithm to find the best policy such that the neural network yields the highest validation accuracy on a target dataset. Our method achieves state-of-the-art accuracy on CIFAR-10, CIFAR-100, SVHN, and ImageNet (without additional data). On ImageNet, we attain a Top-1 accuracy of 83.5\% which is 0.4\% better than the previous record of 83.1\%. On CIFAR-10, we achieve an error rate of 1.5\%, which is 0.6\% better than the previous state-of-theart. Augmentation policies we find are transferable between datasets. The policy learned on ImageNet transfers well to achieve significant improvements on other datasets, such as Oxford Flowers, Caltech-101, Oxford-IIT Pets, FGVC Aircraft, and Stanford Cars.},
+  eventtitle = {2019 {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and {{Pattern Recognition}} ({{CVPR}})},
+  isbn = {978-1-7281-3293-8},
+  langid = {english},
+  keywords = {/！},
+  file = {/home/yua/Zotero/storage/VUGQ9BN5/Cubuk 等 - 2019 - AutoAugment Learning Augmentation Strategies From Data.pdf}
+}
+
+@thesis{DaiGuangHaiJiYuShenJingWangLuoDeYunDongXiangXiangNaoDianXinHaoShiBieJiShuYanJiu2020,
+  type = {硕士论文},
+  title = {基于神经网络的运动想象脑电信号识别技术研究},
+  author = {{代光海}},
+  date = {2020},
+  institution = {电子科技大学}
+}
+
+@article{duDataAugmentationMethod2024,
+  title = {A {{Data Augmentation Method}} for {{Motor Imagery EEG Signals Based}} on {{DCGAN-GP Network}}},
+  author = {Du, Xiuli and Ding, Xiaohui and Xi, Meiling and Lv, Yana and Qiu, Shaoming and Liu, Qingli},
+  date = {2024-04-12},
+  journaltitle = {Brain Sciences},
+  shortjournal = {Brain Sciences},
+  volume = {14},
+  number = {4},
+  pages = {375},
+  issn = {2076-3425},
+  doi = {10.3390/brainsci14040375},
+  url = {https://www.mdpi.com/2076-3425/14/4/375},
+  urldate = {2025-11-30},
+  abstract = {Motor imagery electroencephalography (EEG) signals have garnered attention in brain–computer interface (BCI) research due to their potential in promoting motor rehabilitation and control. However, the limited availability of labeled data poses challenges for training robust classifiers. In this study, we propose a novel data augmentation method utilizing an improved Deep Convolutional Generative Adversarial Network with Gradient Penalty (DCGAN-GP) to address this issue. We transformed raw EEG signals into two-dimensional time–frequency maps and employed a DCGANGP network to generate synthetic time–frequency representations resembling real data. Validation experiments were conducted on the BCI IV 2b dataset, comparing the performance of classifiers trained with augmented and unaugmented data. Results demonstrated that classifiers trained with synthetic data exhibit enhanced robustness across multiple subjects and achieve higher classification accuracy. Our findings highlight the effectiveness of utilizing a DCGAN-GP-generated synthetic EEG data to improve classifier performance in distinguishing different motor imagery tasks. Thus, the proposed data augmentation method based on a DCGAN-GP offers a promising avenue for enhancing BCI system performance, overcoming data scarcity challenges, and bolstering classifier robustness, thereby providing substantial support for the broader adoption of BCI technology in real-world applications.},
+  langid = {english},
+  keywords = {/？},
+  annotation = {TLDR: The proposed data augmentation method utilizing an improved Deep Convolutional Generative Adversarial Network with Gradient Penalty (DCGAN-GP) offers a promising avenue for enhancing BCI system performance, overcoming data scarcity challenges, and bolstering classifier robustness, thereby providing substantial support for the broader adopted BCI technology in real-world applications.},
+  file = {/home/yua/Zotero/storage/T6EI4M2E/Du 等 - 2024 - A Data Augmentation Method for Motor Imagery EEG Signals Based on DCGAN-GP Network.pdf}
+}
+
+@thesis{FangYuanJiYuShenDuXueXiDeEEGNaoDianTuXinHaoYuYinHeCheng,
+  type = {硕士学位论文},
+  title = {基于深度学习的EEG脑电图信号语音合成},
+  author = {{方元}},
+  namea = {{张学良}},
+  nameatype = {collaborator},
+  journaltitle = {基础科学;医药卫生科技;信息科技},
+  institution = {内蒙古大学},
+  doi = {10.27224/d.cnki.gnmdu.2025.000215},
+  url = {https://doi.org/10.27224/d.cnki.gnmdu.2025.000215},
+  urldate = {2025-11-29},
+  abstract = {大脑是人体的中枢指挥系统,脑信号反映了神经元之间复杂且精细的交互活动。对脑信号的深入研究为人机交互技术开辟了新的可能路径。其中脑信号语音合成技术旨在从脑电信号中提取语音相关的潜在特征,并借助语音合成模型重构自然语音。该技术在帮助语言障碍患者恢复交流能力、推动脑机接口技术的发展以及提升智能人机交互系统的自然性与适应性方面,具有重要的应用前景与研究价值。近年来,相关研究取得了显著进展,已能够在植入式脑电设备上实现语音合成。然而,在采用非植入式设备采集的脑电图信号上,当前的语音合成效果仍然有限。尽管脑电图信号精度较低,但非植入设备具有更高的便利性,因此研究基于脑电图的语音合成具有重要意义。 近年来,深度学习在脑电图语音合成领域得到了广泛应用,多数研究采用端到端方式进行训练。然而,由于该任务本身的高度非线性、低信噪比特性,以及受限的数据量,现有方法在拟合大规模模型方面存在一定困难,限制了脑电图语音合成性能的进一步提升。一些工作关注到了这一问题,尝试对脑电信号进行空间滤波、频域滤波获取其中和语音更相关的特征以简化问题,但是增加这些传统的预处理方法通常会损失脑电图信号中大量信息,增加滤波的预处理并不能完美的解决脑电图语音合成中的问题。 因此,本课题聚焦于如何更好的在数据受限情形下,将目前更先进的模型应用到脑电图语音合成。本文提出了两个算法,基于交叉注意力机制听觉脑电信号语音转换算法和基于离散扩散模型说话脑电信号语音转换算法。本课题提出的模型在推动脑电图语音合成上提出了新的方法,并一定程度上克服了数据受限使用复杂模型效果差的缺点。 本课题针对脑电图语音合成任务,分别进行了以下工作: (1)针对听觉脑电图语音合成任务,本研究提出了基于交叉注意力机制听觉脑电信号语音转换算法。该方法选用Wave Net作为主干网络。提出了多级粒度预测策略,将困难的语音合成任务分解为四个从简单到复杂的子任务引导模型学习脑电图到语音的转换。此外,本研究设计了一种混合损失函数,结合不同粒度特征的学习,显著提升了模型训练的稳定性。并且采用了Mixup数据增强方式,有效提高了数据的多样性,提升了模型的泛化能力。在2024听觉脑电图挑战赛数据集上的实验结果表明,相比于现有听觉脑电图语音合成方案,本文所提出的模型在皮尔逊相关系数上有显著提升。 (2)对于说话脑电图语音合成任务,本研究提出了基于离散扩散模型说话脑电信号语音转换算法。该方法首次将离散扩散模型应用到脑电图语音合成任务上,通过脑电图预训练模型La Bram提取语音特征,通过引入预训练模型的先验知识缓解数据量受限问题,使用神经网络音频编码器Wav Tokenizer离散化语音,将语音压缩到一个离散紧致的低维空间上,完成脑电图到语音的转换。本文还提出基于双向Mamba的线性注意力机制的模型,通过Mamba对时序特征建模。在自采的说话脑电图数据集实验结果表明,该方法相比于现有说话脑电图语音合成方法,本文所提出的方法取得最优的性能。},
+  langid = {chinese},
+  pagetotal = {55},
+  keywords = {/X,卷积神经网络,深度学习,离散扩散模型,脑机接口,脑电信号语音合成},
+  annotation = {major: 计算机科学与技术\\
+download: 15\\
+CLC: R318;TP18;TN912.33\\
+dbcode: CMFD\\
+dbname: CMFDTEMP\\
+filename: 1025648623.nh},
+  file = {/home/yua/Zotero/storage/UGXI8TZY/方元 - 基于深度学习的EEG脑电图信号语音合成.pdf}
+}
+
+@article{FuRongRongJiYuShenJingZhiLiangMoXingDeYunDongXiangXiangNaoDianShuJuZengQiang2025,
+  title = {基于神经质量模型的运动想象脑电数据增强},
+  author = {{付荣荣} and {孟云} and {黄晓东} and {陈浩} and {吴娜}},
+  date = {2025},
+  journaltitle = {计量学报},
+  volume = {46},
+  number = {5},
+  pages = {762--768},
+  issn = {1000-1158},
+  url = {https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2025&filename=JLXB202505020},
+  urldate = {2025-11-29},
+  abstract = {针对脑机交互系统发展中数据不足的问题，通过神经质量模型合成事件相关去同步（ERD）和事件相关同步（ERS）特征，节省模型训练时间，避免数据过拟合。引入了基于脑同侧运动感觉区μ/β节律的ROI神经元群模型，调整幅值的加减常数后，生成模拟ERD/ERS信号。实验证明，模拟信号与真实信号在共空间模式特征上相似，滤波和共空间模式特征提取后的机器学习分类准确率接近真实数据。混合不同比例的模拟和真实数据，对分类准确率的影响不大，验证了基于神经质量模型的模拟信号对ERD/ERS信号进行数据增强的有效性。这一方法有望在小样本数据集下用于算法创新和检验，同时可以缩短实验时间，为脑机交互系统的发展提供有力支持。},
+  langid = {chinese},
+  keywords = {/？,事件相关去同步,事件相关同步,数据增强,神经元群模型,脑机交互,脑电信号},
+  annotation = {original-container-title: Acta Metrologica Sinica\\
+foundation: 国家自然科学基金（62073282）； 河北省自然科学基金（F2022203092）； 河北省全职引进国家高层次创新型人才科研项目（2021HBQZYCSB003）； 秦皇岛市科技计划（202302B015）；\\
+download: 141\\
+CLC: R318;TN911.7\\
+dbcode: CJFQ\\
+dbname: CJFDLAST2025\\
+filename: JLXB202505020\\
+publicationTag: 北大核心, JST, CSCD, WJCI\\
+CIF: 2.004\\
+AIF: 1.501},
+  file = {/home/yua/Zotero/storage/VBPMC76A/付荣荣 等 - 2025 - 基于神经质量模型的运动想象脑电数据增强.pdf}
+}
+
+@article{GuXueJingRongHeZhuYiLiDeShuangFenZhiShiKongJuanJiNaoDianShiBieWangLuo2025,
+  title = {融合注意力的双分支时空卷积脑电识别网络},
+  author = {{谷学静} and {周记帆} and {郭志斌}},
+  date = {2025},
+  journaltitle = {现代电子技术},
+  volume = {48},
+  number = {18},
+  pages = {159--164},
+  issn = {1004-373X},
+  doi = {10.16652/j.issn.1004-373x.2025.18.024},
+  url = {https://doi.org/10.16652/j.issn.1004-373x.2025.18.024},
+  urldate = {2025-11-29},
+  abstract = {针对运动想象脑电信号特征表达能力弱、分类识别准确率低等问题，提出一种融合注意力机制的双分支时空卷积运动想象识别网络。为解决数据量少的问题，提出一种改进的滑动窗口技术进行数据增强；然后将数据输入到特征提取网络中，采用双分支结构同时提取时间和空间特征。时间分支上，采用多尺度时序卷积提取不同尺度下的时间特征；空间分支上，使用深度可分离卷积提取深层次的空间特征。最后，采用注意力机制为融合特征动态分配权重。与其他方法的对比结果表明，所提出的网络模型具有较好的分类性能和泛化能力。},
+  langid = {chinese},
+  keywords = {/？,双分支结构,多尺度时序卷积,数据增强,注意力机制,脑电信号,运动想象},
+  annotation = {original-container-title: Modern Electronic Technique\\
+foundation: 唐山市沉浸式虚拟环境基础仿真团队项目(18130221A)；\\
+download: 185\\
+CLC: R318;TN911.7\\
+dbcode: CJFQ\\
+dbname: CJFDLAST2025\\
+filename: XDDJ202518024\\
+publicationTag: 北大核心, JST, WJCI\\
+CIF: 1.326\\
+AIF: 0.729},
+  file = {/home/yua/Zotero/storage/8HBLVI3U/谷学静 等 - 2025 - 融合注意力的双分支时空卷积脑电识别网络.pdf}
+}
+
+@article{habashiGenerativeAdversarialNetworks2023,
+  title = {Generative Adversarial Networks in {{EEG}} Analysis: An Overview},
+  shorttitle = {Generative Adversarial Networks in {{EEG}} Analysis},
+  author = {Habashi, Ahmed G. and Azab, Ahmed M. and Eldawlatly, Seif and Aly, Gamal M.},
+  date = {2023-04-11},
+  journaltitle = {Journal of NeuroEngineering and Rehabilitation},
+  shortjournal = {J NeuroEngineering Rehabil},
+  volume = {20},
+  number = {1},
+  pages = {40},
+  issn = {1743-0003},
+  doi = {10.1186/s12984-023-01169-w},
+  url = {https://jneuroengrehab.biomedcentral.com/articles/10.1186/s12984-023-01169-w},
+  urldate = {2025-11-30},
+  abstract = {Electroencephalogram (EEG) signals have been utilized in a variety of medical as well as engineering applications. However, one of the challenges associated with recording EEG data is the difficulty of recording large amounts of data. Consequently, data augmentation is a potential solution to overcome this challenge in which the objective is to increase the amount of data. Inspired by the success of Generative Adversarial Networks (GANs) in image processing applications, generating artificial EEG data from the limited recorded data using GANs has seen recent success. This article provides an overview of various techniques and approaches of GANs for augmenting EEG signals. We focus on the utility of GANs in different applications including Brain-Computer Interface (BCI) paradigms such as motor imagery and P300-based systems, in addition to emotion recognition, epileptic seizures detection and prediction, and various other applications. We address in this article how GANs have been used in each study, the impact of using GANs on the model performance, the limitations of each algorithm, and future possibilities for developing new algorithms. We emphasize the utility of GANs in augmenting the limited EEG data typically available in the studied applications.},
+  langid = {english},
+  keywords = {/X},
+  annotation = {TLDR: The utility of GANs in augmenting the limited EEG data typically available in the studied applications is emphasized and addressed, including Brain-Computer Interface paradigms such as motor imagery and P300-based systems.},
+  file = {/home/yua/Zotero/storage/W8WYXJYH/Habashi 等 - 2023 - Generative adversarial networks in EEG analysis an overview.pdf}
+}
+
+@article{hanMSRLNetMultiSourceFusion2025,
+  title = {{{MSRLNet}}: {{A Multi-Source Fusion}} and {{Feedback Network}} for {{EEG Feature Recognition}} in {{ADHD}}},
+  shorttitle = {{{MSRLNet}}},
+  author = {Han, Qiulei and Song, Ze and Ye, Hongbiao and Sun, Yan and Zhao, Jian and Shi, Lijuan and Kuang, Zhejun},
+  date = {2025-10-22},
+  journaltitle = {Brain Sciences},
+  shortjournal = {Brain Sciences},
+  volume = {15},
+  number = {11},
+  pages = {1132},
+  issn = {2076-3425},
+  doi = {10.3390/brainsci15111132},
+  url = {https://www.mdpi.com/2076-3425/15/11/1132},
+  urldate = {2025-11-30},
+  abstract = {Background: Electroencephalography (EEG) has been widely used in Attention Deficit Hyperactivity Disorder (ADHD) recognition, but existing methods still suffer from limitations in dynamic modeling, small-sample adaptability, and training stability. This study proposes a Multi-Source Fusion and Feedback Network (MSRLNet) to enhance EEG-based ADHD recognition. Methods: MSRLNet comprises three modules: (1) Multi-Source Feature Fusion (MSFF), combining microstate and statistical features to improve interpretability; (2) a CNN-GRU Parallel Module (CGPM) for multi-scale temporal modeling; and (3) Performance Feedback–driven Parameter Optimization (PFPO) to enhance training stability. Feature-level data augmentation is introduced to alleviate overfitting in small-sample scenarios. Results: On a public dataset, MSRLNet achieved an accuracy of 98.90\%, an F1-score of 98.98\%, and a kappa of 0.979, all exceeding comparative approaches. Conclusions: MSRLNet shows high accuracy and robustness in ADHD EEG feature recognition, verifying its potential application value in clinical auxiliary diagnosis.},
+  langid = {english},
+  keywords = {/X},
+  annotation = {TLDR: MSRLNet shows high accuracy and robustness in ADHD EEG feature recognition, verifying its potential application value in clinical auxiliary diagnosis and easing overfitting in small-sample scenarios.},
+  file = {/home/yua/Zotero/storage/VG67E2FR/Han 等 - 2025 - MSRLNet A Multi-Source Fusion and Feedback Network for EEG Feature Recognition in ADHD.pdf}
+}
+
+@article{heDataAugmentationDeep2021,
+  title = {Data {{Augmentation}} for {{Deep Neural Networks Model}} in {{EEG Classification Task}}: {{A Review}}},
+  shorttitle = {Data {{Augmentation}} for {{Deep Neural Networks Model}} in {{EEG Classification Task}}},
+  author = {He, Chao and Liu, Jialu and Zhu, Yuesheng and Du, Wencai},
+  date = {2021-12-17},
+  journaltitle = {Frontiers in Human Neuroscience},
+  shortjournal = {Front. Hum. Neurosci.},
+  volume = {15},
+  pages = {765525},
+  issn = {1662-5161},
+  doi = {10.3389/fnhum.2021.765525},
+  url = {https://www.frontiersin.org/articles/10.3389/fnhum.2021.765525/full},
+  urldate = {2025-11-30},
+  abstract = {Classification of electroencephalogram (EEG) is a key approach to measure the rhythmic oscillations of neural activity, which is one of the core technologies of brain-computer interface systems (BCIs). However, extraction of the features from non-linear and non-stationary EEG signals is still a challenging task in current algorithms. With the development of artificial intelligence, various advanced algorithms have been proposed for signal classification in recent years. Among them, deep neural networks (DNNs) have become the most attractive type of method due to their end-to-end structure and powerful ability of automatic feature extraction. However, it is difficult to collect large-scale datasets in practical applications of BCIs, which may lead to overfitting or weak generalizability of the classifier. To address these issues, a promising technique has been proposed to improve the performance of the decoding model based on data augmentation (DA). In this article, we investigate recent studies and development of various DA strategies for EEG classification based on DNNs. The review consists of three parts: what kind of paradigms of EEG-based on BCIs are used, what types of DA methods are adopted to improve the DNN models, and what kind of accuracy can be obtained. Our survey summarizes the current practices and performance outcomes that aim to promote or guide the deployment of DA to EEG classification in future research and development.},
+  langid = {english},
+  keywords = {/X},
+  annotation = {TLDR: This article investigates recent studies and development of various DA strategies for EEG classification based on DNNs, and summarizes the current practices and performance outcomes that aim to promote or guide the deployment of DA to EEG classification in future research and development.},
+  file = {/home/yua/Zotero/storage/HGCPMB3F/He 等 - 2021 - Data Augmentation for Deep Neural Networks Model in EEG Classification Task A Review.pdf}
+}
+
+@thesis{HeHuanHuanJiYuNaoDianXinHaoDeShuJuZengQiangYuQingXuShiBieYanJiu2025,
+  type = {硕士论文},
+  title = {基于脑电信号的数据增强与情绪识别研究},
+  author = {{何欢欢}},
+  date = {2025},
+  institution = {兰州大学}
+}
+
+@thesis{HouQiEnJiYuNaoDianXinHaoDeJiaShiPiLaoZhuangTaiShiBieYanJiu2024,
+  type = {硕士论文},
+  title = {基于脑电信号的驾驶疲劳状态识别研究},
+  author = {{侯启恩}},
+  date = {2024},
+  institution = {燕山大学}
+}
+
+@thesis{HuangFeiJiYu3DJuanJiShenJingWangLuoHeShengChengDuiKangWangLuoDeYunDongXiangXiangNaoDianXinHaoJieMaYanJiu2025,
+  type = {硕士学位论文},
+  title = {基于3D卷积神经网络和生成对抗网络的运动想象脑电信号解码研究},
+  author = {{黄飞}},
+  namea = {{孙曜}},
+  nameatype = {collaborator},
+  date = {2025},
+  journaltitle = {基础科学;医药卫生科技;信息科技},
+  institution = {杭州电子科技大学},
+  doi = {10.27075/d.cnki.ghzdc.2025.001444},
+  url = {https://doi.org/10.27075/d.cnki.ghzdc.2025.001444},
+  urldate = {2025-11-29},
+  abstract = {运动想象(Motor Imagery,MI)脑机接口(Brain-Computer Interface,BCI)系统通过采集受试者在进行运动想象任务时产生的脑电信号(MI-EEG),并将其解码为可用于控制外部设备的指令信号,从而实现人与环境的交互。该技术在运动康复、远程控制和人体增强方面展现出重要应用潜力和独特价值。实现MI-BCI系统的高效运行,依赖于对足量的MI-EEG信号进行特征提取及准确分类。但是,MI-EEG由于不同受试者的大脑活动的差异难以泛化,现有的分类方法缺乏受试者自适应的特征提取机制,同时,还忽略了MI-EEG信号的重要空间拓扑信息和全局时间变化趋势,这些问题限制了分类的准确性。另一个难点是,MI-EEG具有非平稳性和信噪比低的特点,这导致难以获取到训练高性能的深度学习模型所需的大量数据,最终影响到分类精度。本文针对MI-EEG解码研究中存在的两类问题进行的主要研究工作如下: (1)针对MI-EEG解码研究中出现的缺乏时空特征提取和泛化能力差的问题,本文设计了基于多尺度特征的3D卷积神经网络(Multi scale feature 3D convolutional neural network,MSF3D)。该网络可以在大脑区域中自适应地为与运动想象任务相关的空间通道和时间采样分配更高的权重,从而获取到MI-EEG的多尺度时空特征。实验结果表明该模型性能优于其他传统机器学习和多尺度卷积神经网络解码模型。在MI-EEG四分类数据集BCICIV＿2A(2A)和High Gamma Dataset(HGD)上平均分类准确率分别达到92.89\%和95.39\%,而在二分类数据集BCICIV＿2B(2B)上平均分类准确率也达到86.55\%。 (2)针对MI-EEG解码研究中出现的时序数据不充足的问题,本文设计了基于生成对抗网络(Generative Adversarial Network,GAN)的数据增强网络模型WTGAN。该模型一方面引入Wasserstein距离和梯度惩罚机制缓和传统GAN训练时出现的梯度消失现象,另一方面引入的注意力模块通过动态权重分配机制,可以同步捕获电极间空间关联性与MI-EEG信号的多尺度时序依赖。实验结果表明该模型性能优于其他几种具有代表性的数据增强模型,在数据集BCICIV＿2A(2A)取得了最高的平均分类准确率。},
+  langid = {chinese},
+  pagetotal = {71},
+  keywords = {/！,卷积神经网络,生成对抗网络,脑机接口,脑电信号解码,运动想象},
+  annotation = {major: 电子信息（专业学位）\\
+download: 43\\
+CLC: TP183;TN911.7;R318\\
+dbcode: CMFD\\
+dbname: CMFD202502\\
+filename: 1025376433.nh},
+  file = {/home/yua/Zotero/storage/9DJUIIHY/黄飞 - 2025 - 基于3D卷积神经网络和生成对抗网络的运动想象脑电信号解码研究.pdf}
+}
+
+@thesis{HuangJunJiJiYuShenDuXueXiDeShiJueCiJiNaoDianXinHaoZengQiangShiBieSuanFaYanJiu2025,
+  type = {硕士学位论文},
+  title = {基于深度学习的视觉刺激脑电信号增强-识别算法研究},
+  author = {{黄俊洁}},
+  namea = {{陈万忠}},
+  nameatype = {collaborator},
+  date = {2025},
+  journaltitle = {基础科学;医药卫生科技;信息科技},
+  institution = {吉林大学},
+  doi = {10.27162/d.cnki.gjlin.2025.002017},
+  url = {https://doi.org/10.27162/d.cnki.gjlin.2025.002017},
+  urldate = {2025-11-29},
+  abstract = {视觉感知过程的识别是一项在脑科学领域和人工智能领域都十分具有挑战性的研究课题,也是实现人机交互系统中各种视觉相关任务的前提。然而,基于脑电信号的视觉刺激解码研究存在数据稀缺性的问题,难以建立有效、高精度和稳定的机器学习模型;同时,如何高效地从脑电信号中提取出有效特征,以获得更好的解码性能仍然是一项十分具有挑战性的工作。针对以上问题,本文提出了一种基于深度学习的视觉刺激脑电信号增强-识别算法,它由以下两个部分组成:增强算法是基于深度生成模型的脑电信号数据增强框架,用于生成高质量的脑电信号数据以提高深度学习模型的分类性能;识别算法则是结合线性注意力机制与卷积神经网络的深度学习解码模型,可以在保持较少的模型参数量下取得最先进的视觉刺激脑电分类性能。本文的主要研究工作总结如下: (1)针对视觉刺激脑电解码研究中存在脑电信号数据稀缺性的问题,本文提出了一种基于扩散概率模型的深度脑电信号生成模型,对视觉刺激脑电信号进行高质量、多样化的生成。在斯坦福大学公开的视觉刺激脑电数据集上的实验结果显示,使用本文提出的数据增强方法后,6分类和HF-IO分类任务下识别准确率相较于无增强方法平均提升了9.56\%和2.57\%。 (2)为了使生成的视觉刺激脑电信号尽可能接近真实,本文设计了一个基于贝叶斯方法的超参数优化模块,对脑电信号的生成过程进行自我优化,使生成的脑电信号的质量达到最优。 (3)针对现有解码模型参数量大,分类准确率较低的问题,本文提出了一种结合线性注意力机制和卷积神经网络的深度学习模型。本文提出的方法在视觉刺激脑电6分类、72分类、HF-IO分类任务下识别准确率分别为54.13\%,29.83\%,89.69\%,优于现有方法的同时所需的模型参数量不到现有方法的10\%。 总的来说,本文提出的增强算法可以有效地生成高质量的脑电信号,并且明显提升了脑电解码模型的性能;识别算法在多项分类任务中达成了最先进的分类性能,同时模型参数量和网络计算复杂度相比于现有的方法具有极其明显的优势。},
+  langid = {chinese},
+  pagetotal = {88},
+  keywords = {/X,卷积神经网络,深度学习模型,线性注意力机制,脑机接口,视觉刺激脑电信号},
+  annotation = {major: 控制科学与工程\\
+download: 46\\
+CLC: TP18;TN911.7;R318\\
+dbcode: CMFD\\
+dbname: CMFD202502\\
+filename: 1025473017.nh},
+  file = {/home/yua/Zotero/storage/2YUKI8D2/黄俊洁 - 2025 - 基于深度学习的视觉刺激脑电信号增强-识别算法研究.pdf}
+}
+
+@thesis{HuangWeiJianJiYuShuJuZengQiangHeShenDuXueXiDeNaoDianXinHaoFenLeiYanJiu2021,
+  type = {硕士论文},
+  title = {基于数据增强和深度学习的脑电信号分类研究},
+  author = {{黄伟键}},
+  date = {2021},
+  institution = {广州大学}
+}
+
+@article{HuoShouJunJiYuShenDuJuanJiWangLuoDeYunDongXiangXiangNaoDianXinHaoMoShiShiBie2021,
+  title = {基于深度卷积网络的运动想象脑电信号模式识别},
+  author = {{霍首君} and {郝琰} and {石慧宇} and {董艳清} and {曹锐}},
+  date = {2021-04},
+  journaltitle = {计算机应用},
+  volume = {41},
+  number = {4},
+  pages = {1042--1048},
+  publisher = {太原理工大学}
+}
+
+@thesis{HuWenRongJiYuShuJuZengQiangHeShenDuShenJingWangLuoDeDianXianJianCeYanJiu2025,
+  type = {硕士学位论文},
+  title = {基于数据增强和深度神经网络的癫痫检测研究},
+  author = {{胡文蓉}},
+  namea = {{袁莎莎}},
+  nameatype = {collaborator},
+  date = {2025},
+  journaltitle = {医药卫生科技;信息科技},
+  institution = {曲阜师范大学},
+  doi = {10.27267/d.cnki.gqfsu.2025.001008},
+  url = {https://doi.org/10.27267/d.cnki.gqfsu.2025.001008},
+  urldate = {2025-11-29},
+  abstract = {癫痫是一种常见的慢性神经系统疾病,以大脑神经元细胞的电活动异常,导致频繁的癫痫发作,对患者的日常生活和身心健康产生重大影响。脑电图(Electroencephalogram,EEG)作为一种非侵入式神经电生理监测技术,通过实时记录大脑皮层神经元集群同步放电产生的电位波动,凭借其高时间分辨率、操作可重复性及较低临床检测成本等优势,已成为癫痫病灶定位与发作期特征识别的标准化诊断工具。然而,传统癫痫诊断依赖医生对脑电图的视觉分析,需人工筛查数小时至数天的连续脑电信号,该过程存在高误诊风险及效率瓶颈,尤其对夜间发作或间歇期异常放电的识别敏感度不足,且长期监测产生的海量数据存在显著类别失衡问题。基于数据增强技术的癫痫发作检测方法,通过生成癫痫发作期样本有效缓解数据的类不平衡问题,结合深度神经网络实现脑电特征的提取与分类,可提升癫痫发作检测的准确性,辅助医生诊断癫痫发作,显著缩短诊断延迟,优化治疗方案制定时效性。因此,本文基于数据增强与深度神经网络提出了三种癫痫发作检测方法,主要内容如下: (1)针对癫痫脑电信号长时监测中的类不平衡问题,系统评估MixUp、SuperMix、Co-MixUp三种数据增强方法对数据平衡的优化效果。通过离散小波变换(Discrete Wavelet Transform,DWT)提取癫痫特征显著的特定频段信号,结合数据增强的混合策略增强癫痫发作期样本,有效缓解数据类不平衡问题。构建融合注意力机制的双向长短期记忆网络(Bi-directional Long Short-Term Memory,BiLSTM)与卷积神经网络(Convolutional Neural Networks,CNN)混合模型,通过时空特征联合建模提升脑电信号分类性能。在Bonn和CHB-MIT数据库上的对比实验表明,Co-MixUp较其他方法展现出更高的精度,验证了数据增强技术在癫痫发作检测中的技术优势。 (2)由于传统卷积神经网络与双向长短期记忆网络在处理长序列脑电信号时存在的梯度消失或者爆炸风险,提出一种融合Co-MixUp数据增强与改进的Transformer网络(Inresformer)的癫痫发作检测方法。具体而言,该方法通过离散小波变换对原始脑电信号进行分解,选取三个关键子带信号进行重建,并采用Co-MixUp方法解决数据不平衡问题;改进的Transformer网络创新性地引入双半步前馈结构增强非线性表征能力,结合Inception模块的多尺度特征提取优势与Residual模块的梯度传导特性,实现对发作期与发作间期脑电信号的深层动态关联特征挖掘。实验环节在Bonn和CHB-MIT长期数据集上验证模型性能,通过特定频段子信号的判别融合机制,该方法在癫痫发作识别任务中展现出优于现有深度学习模型的准确率,同时在CHB-MIT数据集上实现了计算复杂度与实时性指标的显著优化,为临床癫痫检测提供了具有实用价值的新方案。 (3)为了解决长短期记忆网络(Long Short-Term Memory,LSTM)处理长序列数据存在记忆容量受限的问题,本研究提出一种整合空间变化生成方法(Spatial Variation Generation,SVG)和Inres-xLSTM网络的癫痫检测算法。首先采用离散小波变换对原始脑电信号进行分解与特征重组;继而应用空间变化生成方法构建癫痫发作期的动态特征空间,有效缓解了类别不平衡问题;随后,通过集成Inception模块和残差连接的Inres-xLSTM网络,在保持LSTM时序建模优势的同时,显著增强了特征提取能力与模型鲁棒性;最终通过分类标签数据融合策略实现精准分类。实验结果表明,在Bonn数据集和CHB-MIT长程脑电数据集上优于现有深度学习方法。 本论文的研究成果拓展了数据增强和深度神经网络在癫痫发作检测领域的应用,使用多种指标进行验证,得到了优异的实验结果有效助力癫痫自动检测系统的进步与发展。由于实验数据的限制,我们所提出的癫痫发作检测算法在临床应用中还有待进一步优化和提高。},
+  langid = {chinese},
+  pagetotal = {60},
+  keywords = {/！,BiLSTM网络,Transformer模型,xLSTM网络,数据增强,离散小波变换},
+  annotation = {major: 计算机应用技术\\
+download: 98\\
+CLC: TP183;R742.1\\
+dbcode: CMFD\\
+dbname: CMFD202502\\
+filename: 1025022951.nh},
+  file = {/home/yua/Zotero/storage/SRADTYEK/胡文蓉 - 2025 - 基于数据增强和深度神经网络的癫痫检测研究.pdf}
+}
+
+@thesis{LiChuYangJiYuZiJianDuXueXiDeNaoDianTuLuBangFenLeiYanJiu,
+  type = {硕士学位论文},
+  title = {基于自监督学习的脑电图鲁棒分类研究},
+  author = {{李楚阳}},
+  namea = {{李修成}},
+  nameatype = {collaborator},
+  journaltitle = {医药卫生科技;信息科技},
+  institution = {哈尔滨工业大学},
+  doi = {10.27061/d.cnki.ghgdu.2025.004375},
+  url = {https://doi.org/10.27061/d.cnki.ghgdu.2025.004375},
+  urldate = {2025-11-29},
+  abstract = {脑电图(EEG)作为一种非侵入性的神经生理检测技术,以其毫秒级时间分辨率在如癫痫检测中具有不可替代的价值。然而,在实际临床环境中,EEG分类模型普遍会受到由噪声和预处理不一致导致的数据分布偏移的影响,部署时常出现性能退化问题。同时,专业标注的稀缺性进一步限制了传统监督学习方法在EEG分类任务中的应用,模型难以充分挖掘数据潜在模式。亟需开发鲁棒性强、适应性高的分类模型以应对真实医疗场景挑战。 基于上述背景,本研究提出了一种面向脑电时序建模的鲁棒预训练框架,旨在解决EEG信号处理中标签稀缺性和数据分布偏移的双重困境。研究动机源于现有自监督学习方法对缺少对噪声模式的判别、忽略时频通道关系鲁棒性差异以及时频特征利用不充分的问题。为此,本研究创新性地融合了额外噪声负样本对比学习、跨域重构与通道对齐三大技术,构建多任务联合优化的预训练架构。额外噪声负样本对比学习通过引入额外噪声负样本,显式建模噪声分布特征,增强模型对干扰模式的辨识能力;跨域重构任务设计时域到频域及频域到时域的双向映射机制,实现时频特征深度融合,避免单一域内信息损失;通道对齐策略利用频域通道关系的稳定性校正时域表征偏移,进一步提升对数据偏移的鲁棒性。实验在天普大学医院脑电图数据集的癫痫发作检测与异常分类任务上进行,涵盖多种噪声和偏移条件下的性能评估。实验表明,本框架在原始数据及数据偏移环境下均显著优于现有自监督和监督学习基准方法,尤其对带通滤波导致的分布偏移展现出卓越鲁棒性,性能下降幅度最小。本研究首次将噪声显式建模引入时间序列对比学习,建立了时频特征交互与通道校准机制,为EEG信号鲁棒分类提供了新视角与实践方案,对推动脑机接口、神经疾病诊断等领域的智能化应用具有重要理论价值与临床意义。 此外,本研究进一步探索了基于残差混合的对比学习增强方法,旨在通过在嵌入空间内实施残差混合操作,缓解传统数据增强策略多样性不足的局限性,增强模型鲁棒性。研究通过分析监督模型中间层特征偏移分布,发现噪声强度与特征偏移间的潜在关联,并据此设计了嵌入空间残差混合机制以引入语义噪声。尽管实验结果显示该方法在不同模型架构中表现不一,性能提升有限,但明确了残差混合策略的适用边界,揭示了高维嵌入空间特征混合可能引入的语义歧义风险,为后续对比学习优化提供了重要经验参考。},
+  langid = {chinese},
+  pagetotal = {70},
+  keywords = {/X,时间序列分类,脑电图,自监督学习,鲁棒性},
+  annotation = {major: 计算机技术（专业学位）\\
+download: 13\\
+CLC: TP18;TN911.7;R741.044\\
+dbcode: CMFD\\
+dbname: CMFDTEMP\\
+filename: 1025739534.nh},
+  file = {/home/yua/Zotero/storage/7MQ64RVN/李楚阳 - 基于自监督学习的脑电图鲁棒分类研究.pdf}
+}
+
+@article{liGMSSGraphBasedMultiTask2023,
+  title = {{{GMSS}}: {{Graph-Based Multi-Task Self-Supervised Learning}} for {{EEG Emotion Recognition}}},
+  shorttitle = {{{GMSS}}},
+  author = {Li, Yang and Chen, Ji and Li, Fu and Fu, Boxun and Wu, Hao and Ji, Youshuo and Zhou, Yijin and Niu, Yi and Shi, Guangming and Zheng, Wenming},
+  date = {2023-07-01},
+  journaltitle = {IEEE Transactions on Affective Computing},
+  shortjournal = {IEEE Trans. Affective Comput.},
+  volume = {14},
+  number = {3},
+  pages = {2512--2525},
+  issn = {1949-3045, 2371-9850},
+  doi = {10.1109/TAFFC.2022.3170428},
+  url = {https://ieeexplore.ieee.org/document/9765326/},
+  urldate = {2025-11-30},
+  abstract = {Previous electroencephalogram (EEG) emotion recognition relies on single-task learning, which may lead to overfitting and learned emotion features lacking generalization. In this paper, a graph-based multi-task self-supervised learning model (GMSS) for EEG emotion recognition is proposed. GMSS has the ability to learn more general representations by integrating multiple selfsupervised tasks, including spatial and frequency jigsaw puzzle tasks, and contrastive learning tasks. By learning from multiple tasks simultaneously, GMSS can find a representation that captures all of the tasks thereby decreasing the chance of overfitting on the original task, i.e., emotion recognition task. In particular, the spatial jigsaw puzzle task aims to capture the intrinsic spatial relationships of different brain regions. Considering the importance of frequency information in EEG emotional signals, the goal of the frequency jigsaw puzzle task is to explore the crucial frequency bands for EEG emotion recognition. To further regularize the learned features and encourage the network to learn inherent representations, contrastive learning task is adopted in this work by mapping the transformed data into a common feature space. The performance of the proposed GMSS is compared with several popular unsupervised and supervised methods. Experiments on SEED, SEED-IV, and MPED datasets show that the proposed model has remarkable advantages in learning more discriminative and general features for EEG emotional signals.},
+  langid = {english},
+  keywords = {/！},
+  annotation = {TLDR: Experiments on SEED, SEED-IV, and MPED datasets show that the proposed GMSS has remarkable advantages in learning more discriminative and general features for EEG emotional signals.},
+  file = {/home/yua/Zotero/storage/UZCCIQET/Li 等 - 2023 - GMSS Graph-Based Multi-Task Self-Supervised Learning for EEG Emotion Recognition.pdf}
+}
+
+@thesis{LiJiDianXianNaoDianDeDuiBiXueXiTeZhengBiaoShiJiYongYuZhiXianQuShiBieDeNaoDianYuXunLianMoXingYanJiu2025,
+  type = {硕士学位论文},
+  title = {癫痫脑电的对比学习特征表示及用于致痫区识别的脑电预训练模型研究},
+  author = {{李洁}},
+  namea = {{袁琦}},
+  nameatype = {collaborator},
+  date = {2025},
+  journaltitle = {医药卫生科技;信息科技},
+  institution = {山东师范大学},
+  doi = {10.27280/d.cnki.gsdsu.2025.000267},
+  url = {https://doi.org/10.27280/d.cnki.gsdsu.2025.000267},
+  urldate = {2025-11-29},
+  abstract = {癫痫是一种常见的神经系统疾病,尽管目前已有药物、手术和神经调控等治疗手段,但仍有约三分之一的患者得不到有效的治疗。传统的癫痫诊断方法依靠经验丰富的专家用肉眼观察脑电图(Electroencephalography,EEG)进行判断,但这种方法不仅主观性强、误判率高而且耗时费力。此外,传统的机器学习方法难以捕捉癫痫脑电信号中复杂的非线性特征,而现有的深度学习方法虽然具备较强的特征提取能力,但其解释性相对较弱。因此,为了提高癫痫诊断的准确性与可解释性,本文分别针对癫痫发作检测和致痫区脑电识别提出了基于深度学习的方法。 在癫痫发作检测方面,本研究提出了一种基于深度自监督对比学习的癫痫脑电特征学习方法。该方法首先利用数据增强策略处理癫痫脑电数据,然后通过时间和上下文对比模块,在增强后的脑电数据集上进行训练并提取抽象特征。时间对比模块根据癫痫脑电信号的时间序列特性,利用自回归模型来挖掘过去和未来时间点的依赖关系;上下文对比模块则使用非线性投影对特征进行非线性变换并映射到用于对比的特征空间中,学习更加有区分性的脑电特征表示。最后将学习到的抽象表示送入XGBoost分类器进行分类。实验结果表明,癫痫脑电特征学习方法的准确率和特异性分别达到了92.07\%和92.13\%,验证了本方法在癫痫分类任务中的优势,以及在癫痫发作检测方面的可靠性。 在致痫区脑电识别方面,本研究设计了双通道联合特征提取框架,并提出了一种可解释的预训练模型。双通道联合特征提取框架提取了8类时域脑电特征和17类非线性脑电特征,融合了脑电信号不同维度的信息,能够全面捕捉信号的特征。而预训练模型能够将脑电时间序列的子序列拆解为抽象形状、偏移量、缩放等多个属性并学习到一个包含各种抽象形状的癫痫脑电码本,之后对这些形状进行排列组合可以有效地表示不同的致痫区脑电数据。将双通道联合特征提取框架提取的特征与可解释的预训练模型提供的潜在空间标记、编码直方图两种可解释的特征表示,分别输入五种分类器进行组合实验,实验结果显示两两结合的特征性能优于单一特征的性能,而三者结合的特征在SVM分类器上性能表现最佳,其准确率、敏感度和特异性分别达到了93.85\%、95.1\%和91.51\%。 综上所述,本文提出的两种方法提升了癫痫发作检测与致痫区脑电识别的准确性和可解释性,为癫痫的精确诊断提供了有力支持。},
+  langid = {chinese},
+  pagetotal = {73},
+  keywords = {/！,对比学习,癫痫,脑电信号,自监督学习,预训练模型},
+  annotation = {major: 电子信息（专业学位）\\
+download: 11\\
+CLC: R742.1;TN911.7;TP18\\
+dbcode: CMFD\\
+dbname: CMFD202502\\
+filename: 1025398182.nh},
+  file = {/home/yua/Zotero/storage/5BE5RVZD/李洁 - 2025 - 癫痫脑电的对比学习特征表示及用于致痫区识别的脑电预训练模型研究.pdf}
+}
+
+@inproceedings{liuDomainAdaptationCrossSubject2021,
+  title = {Domain {{Adaptation}} for {{Cross-Subject Emotion Recognition}} by {{Subject Clustering}}},
+  booktitle = {2021 10th {{International IEEE}}/{{EMBS Conference}} on {{Neural Engineering}} ({{NER}})},
+  author = {Liu, Jin and Shen, Xinke and Song, Sen and Zhang, Dan},
+  date = {2021-05-04},
+  pages = {904--908},
+  publisher = {IEEE},
+  location = {Italy},
+  doi = {10.1109/NER49283.2021.9441368},
+  url = {https://ieeexplore.ieee.org/document/9441368/},
+  urldate = {2025-11-30},
+  abstract = {The high inter-subject variability in emotional EEG activities has posed great challenges for practical EEGbased affective computing applications. The recently popular domain adaptation strategy seemed to be a promising technique for addressing this issue, by minimizing the discrepancy of EEG data from different subjects. The present study proposed and implemented an extended Domain Adaptation method by introducing Subject Clustering (DASC). By clustering subjects based on the similarity of their emotion-specific EEG activities, the DASC method could make a flexible use of the available source domain information towards an optimized target domain application. Using the publicly available EEG dataset of DEAP, the DASC method achieved an average accuracy of 73.9±13.5\% and 68.8±11.2\% for binary classifications of the high or low levels of valence and arousal. Comparison with the stateof-the-art performance as well as the ablation experiments suggest the proposed DASC method as an effective extension to the conventional domain adaptation methods for EEG-based emotion recognition.},
+  eventtitle = {2021 10th {{International IEEE}}/{{EMBS Conference}} on {{Neural Engineering}} ({{NER}})},
+  isbn = {978-1-7281-4337-8},
+  langid = {english},
+  keywords = {/？},
+  file = {/home/yua/Zotero/storage/HF5BB9UC/Liu 等 - 2021 - Domain Adaptation for Cross-Subject Emotion Recognition by Subject Clustering.pdf}
+}
+
+@thesis{LiuGuoRuiZiGuaYingEMDShuJuZengQiangHeHunHeChiDuCNNDeNaoDianXinHaoShiBie2022,
+  type = {硕士论文},
+  title = {{{自适应EMD数据增强和混合尺度CNN的脑电信号识别}}},
+  author = {{刘国睿}},
+  date = {2022},
+  institution = {重庆邮电大学}
+}
+
+@article{LiXiangJiYuCNNYuTransformerDeNaoDianJieMaYanJiu2025,
+  title = {基于CNN与Transformer的脑电解码研究},
+  author = {{李响} and {艾尔肯·亥木都拉}},
+  date = {2025-04-16},
+  journaltitle = {微电子学与计算机},
+  issn = {1000-7180},
+  url = {https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CAPJ&dbname=CAPJLAST&filename=WXYJ20250415001},
+  urldate = {2025-11-29},
+  abstract = {针对现有深度学习模型在脑电信号解码能力的局限性，本文提出了一种RCA-Conformer网络架构，用于脑电图的运动想象分类任务。该架构通过多尺度时序卷积和空间卷积提取局部特征，结合残差通道注意力进一步增强卷积特征表达，并利用自注意力机制捕捉全局依赖性。此外，通过引入残差连接，将卷积模块与Transformer编码器模块提取的特征进行融合，直接输入到分类器中进行分类，从而显著提升模型的分类性能。在受试者依赖评估中，该架构在BCI竞赛IV-2a数据集上达到了80.29\%的分类准确率（Kappa=0.7371）；在BCI竞赛IV-2b数据集上达到了85.74\%的分类准确率（Kappa=0.7148）。通过与现有方法相比，RCA-Conformer表现出了优异的性能，验证了该方法的有效性，为脑电图解码领域提供了新的解决方案。},
+  langid = {chinese},
+  pubstate = {advance online publication},
+  keywords = {/X,多头注意力,多尺度时序卷积,脑机接口,脑电图,运动想象},
+  annotation = {original-container-title: Microelectronics \& Computer\\
+foundation: 国家自然科学基金项目（10971177）；\\
+download: 720\\
+CLC: R318;TN911.7;TP18\\
+dbcode: CAPJ\\
+dbname: CAPJLAST\\
+filename: WXYJ20250415001\\
+publicationTag: JST, WJCI\\
+CIF: 1.701\\
+AIF: 0.876},
+  file = {/home/yua/Zotero/storage/B88Y7SBL/李响和艾尔肯·亥木都拉 - 2025 - 基于CNN与Transformer的脑电解码研究.pdf}
+}
+
+@thesis{LuBoYangJiYuJuanJiShenJingWangLuoDeXiaZhiYunDongJieMaYanJiuCongNaoDianXinHaoJiaoDu2022,
+  type = {硕士论文},
+  title = {基于卷积神经网络的下肢运动解码研究–从脑电信号角度},
+  author = {{鲁博洋}},
+  date = {2022},
+  institution = {东南大学}
+}
+
+@article{moghadamDataCentricAIEEGBased2025,
+  title = {Data-{{Centric AI}} for {{EEG-Based Emotion Recognition}}: {{Noise Filtering}} and {{Augmentation Strategies}}},
+  shorttitle = {Data-{{Centric AI}} for {{EEG-Based Emotion Recognition}}},
+  author = {Moghadam, Nadieh and Hegazy, Rana},
+  date = {2025-11-18},
+  journaltitle = {Bioengineering},
+  shortjournal = {Bioengineering},
+  volume = {12},
+  number = {11},
+  pages = {1264},
+  issn = {2306-5354},
+  doi = {10.3390/bioengineering12111264},
+  url = {https://www.mdpi.com/2306-5354/12/11/1264},
+  urldate = {2025-11-30},
+  abstract = {Research in the biomedical field often faces challenges due to the scarcity and high cost of data, which significantly limit the development and application of machine learning models. This paper introduces a data-centric AI framework for EEG-based emotion recognition that emphasizes improving data quality rather than model complexity. Instead of proposing a deep architecture, we demonstrate how participant-guided noise filtering combined with systematic data augmentation can substantially enhance system performance across multiple classification settings: binary (high vs. low arousal), four-quadrant emotions, and seven discrete emotions. Using the SEED-VII dataset, we show that these strategies consistently improve accuracy and F1 scores, achieving competitive or superior performance compared to more sophisticated published models. The findings highlight a practical and reproducible pathway for advancing biomedical AI systems, showing that prioritizing data quality over architectural novelty yields robust and generalizable improvements in emotion recognition.},
+  langid = {english},
+  keywords = {/？},
+  annotation = {TLDR: A data-centric AI framework for EEG-based emotion recognition that emphasizes improving data quality rather than model complexity is introduced, showing that prioritizing data quality over architectural novelty yields robust and generalizable improvements in emotion recognition.},
+  file = {/home/yua/Zotero/storage/SXAH4H3A/Moghadam和Hegazy - 2025 - Data-Centric AI for EEG-Based Emotion Recognition Noise Filtering and Augmentation Strategies.pdf}
+}
+
+@article{PengLeiNaoDianXinHaoQingXuShiBieGuanJianJiShuYanJiuJinZhan2024,
+  title = {脑电信号情绪识别关键技术研究进展},
+  author = {{彭磊} and {魏国辉} and {马志庆} and {冯今瑀} and {李延军}},
+  date = {2024},
+  journaltitle = {北京生物医学工程},
+  volume = {43},
+  number = {2},
+  pages = {211--217},
+  issn = {1002-3208},
+  url = {https://kns.cnki.net/kcms2/article/abstract?v=QSPvTk9Jgi3Hzdo2z_RpK9ktUVv6avNuc_bWkaSNZJdQDYAziukHLkfw9wZ01L7n4Lp5jm9im_kvVRcs0oIEQVnrL2HllfNZIT9mQ6_8R7YNbxvUwhBRXsJj7mcAxAvKNg_-VFoOvVrtbZcJDjaKMTSZwuKCov3i8RPFKOW0wCLKvDuWp9t3kO_ggicl1kSC&uniplatform=NZKPT&language=CHS},
+  abstract = {随着人机交互技术的不断进步和广泛应用，对用户情绪的准确识别变得日益重要。情绪识别技术已经在多个领域展现出巨大潜力，包括医疗诊断、交通安全和教育等方面。而基于脑电的情绪识别成为了情绪识别领域中的热门研究方向。首先，本文介绍情绪连续和情绪离散模型的基本概念，总结常用的脑电公开数据集，并对数据集的规模、情绪标签以及它们对脑电情绪识别任务的影响进行了比较分析。其次，因为不同频带和脑电通道对于情绪识别的影响各不相同，课题组汇总脑电情绪识别关键频带和通道的相关研究，并从文献中总结归纳出脑电情绪识别的关键频带范围以及具有丰富情绪信息的脑电通道位置。接着，介绍四类脑电情绪特征且给出对应的特征提取方法，也指出各种脑电特征的提取难度和目前在情绪识别中的应用效果。然后，对基于深度学习的脑电情绪识别中的数据增强技术和注意力机制进行了阐述，指出数据增强技术的主流趋势和生成的人工情绪特征的类型，对各种注意力机制的作用方式和侧重点进行了对比分析。数据增强技术用来解决脑电数据量不足的问题，注意力机制则对情绪识别准确率的提高起到了关键作用。最后，对未来脑电情绪识别模型的通用性和脑电采集设备的研究方向做了一定的展望。},
+  langid = {chinese},
+  keywords = {情绪识别,数据增强,注意力机制,深度学习,脑电信号},
+  annotation = {CNKICite: 1},
+  file = {/home/yua/Zotero/storage/KXXRALDT/脑电信号情绪识别关键技术研究进展.pdf}
+}
+
+@thesis{QiaoYingXiaoJiYuDuoWeiTeZhengTuHeShenDuXueXiDeNaoDianXinHaoQingXuShiBieFangFaYanJiu2025,
+  type = {硕士学位论文},
+  title = {基于多维特征图和深度学习的脑电信号情绪识别方法研究},
+  author = {{乔迎晓}},
+  namea = {{赵倩}},
+  nameatype = {collaborator},
+  date = {2025},
+  journaltitle = {基础科学;医药卫生科技;信息科技},
+  institution = {曲阜师范大学},
+  doi = {10.27267/d.cnki.gqfsu.2025.000255},
+  url = {https://doi.org/10.27267/d.cnki.gqfsu.2025.000255},
+  urldate = {2025-11-29},
+  abstract = {智能情绪识别技术在提升人机交互的效率和质量方面发挥着关键作用。该技术通过解析个体的生物信号以识别其情绪状态,具有显著的学术研究价值和实际应用价值。脑电(Electroencephalogram,EEG)信号因其客观性而在情绪研究中占据重要地位,然而其复杂性、非平稳性和非线性特性对情绪分析技术的识别准确率和泛化能力提出了挑战。因此,如何有效地挖掘EEG信号的独特属性以获得具有高判别力的特征,以及如何设计能够适应个体差异的个性化情绪识别方法以提高情绪识别的效率和准确性,是当前基于EEG信号的情绪分析研究中亟待解决的关键问题。本文从EEG信号的多维特征图层面展开研究,提出了三种基于深度学习的情绪识别方法。主要工作及研究成果如下: (1)提出了一种基于空-频-时特征图和轻量级注意力机制的卷积循环神经网络模型SST-CRAM。该模型结合微分熵(Differential Entropy,DE)和功率谱密度(Power Spectral Density,PSD)特征,构建了四维EEG特征图,以捕获丰富的空间、频谱和时间信息。将卷积注意力模块(Convolutional Block Attention Module,CBAM)和高效通道注意力网络(Efficient Channel Attention Network,ECA-Net)集成到卷积神经网络(Convolutional Neural Network,CNN)中,其中,CNN用于学习空间和频谱信息,CBAM用于优先处理全局信息并获取详细和准确的特征,ECA-Net进一步突出了关键脑区和频段。此外,使用双向长短时记忆网络(Bi-directional Long Short-Term Memory,Bi-LSTM)探索时间相关性,实现全面的特征提取。在DEAP数据集上的被试独立实验表明,该模型在效价和唤醒度情绪分类中的平均识别准确率分别达到98.66\%和98.63\%,显示出其在利用空间、频谱和时间特征信息提高情绪识别性能方面的潜力。 (2)提出了一种基于空频特征图和神经架构搜索(Neural Architecture Search,NAS)的脑电情绪识别方法ACAS-EER。在方法(1)构建的四维EEG特征图的基础上,简化时间序列处理步骤,构建了三维空频特征图。基于卷积、池化、恒等操作、跳跃连接以及四种轻量级注意力机制,包括CBAM、ECA-Net、压缩和激励网络(Squeeze-and-Excitation Network,SE-Net)和双重注意力网络(Double Attention Network,A2-Net),设计了一个包含12种候选操作的搜索空间。采用基于梯度的可微架构搜索(Differentiable Architecture Search,DARTS)策略,自动为每个被试搜索到最优的基于注意力机制的CNN模型。在DEAP数据集上进行的被试相关实验结果显示,自动搜索到的最优模型在效价和唤醒度的平均识别准确率分别达到了 97.40\%和97.68\%。该方法不仅减少了对人工的依赖,还实现了高识别准确率,同时能够针对不同被试的不同情绪设计个性化的网络架构,显著提高了模型的效率和适应性。 (3)提出了一种基于掩蔽生成对抗网络和自监督学习的空频特征图增强的脑电情绪识别方法SSDAS-EER。在方法(2)构建的三维空频特征图的基础上,设计了一种掩蔽策略,随机遮盖部分特征,迫使生成对抗网络(Generative Adversarial Network,GAN)基于未遮盖的部分合成潜在的EEG特征,以产生多样性样本。在生成器和判别器中引入自注意力机制,使GAN能够精确捕捉空频特征图中空间和频谱信息的分布特性,确保生成的人工样本的高质量。此外,引入自监督学习,利用人工样本进行监督,增强分类器对生成样本的泛化能力。该方法能够增强每个被试的EEG数据。在DEAP数据集上进行被试相关实验表明,人工样本的效价和唤醒度平均识别准确率分别提高了 1.46\%和1.39\%;自监督学习进一步提升了分类器的性能,分别提升了 0.49\%和0.62\%。},
+  langid = {chinese},
+  pagetotal = {83},
+  keywords = {多维特征图,情绪识别,数据增强,深度学习,神经架构搜索,脑电信号},
+  annotation = {major: 控制理论与控制工程\\
+download: 248\\
+CLC: TP18;TN911.7;R318\\
+dbcode: CMFD\\
+dbname: CMFD202502\\
+filename: 1025022195.nh},
+  file = {/home/yua/Zotero/storage/QEFR28EQ/乔迎晓 - 2025 - 基于多维特征图和深度学习的脑电信号情绪识别方法研究.pdf}
+}
+
+@online{rommelCADDAClasswiseAutomatic2022,
+  title = {{{CADDA}}: {{Class-wise Automatic Differentiable Data Augmentation}} for {{EEG Signals}}},
+  shorttitle = {{{CADDA}}},
+  author = {Rommel, Cédric and Moreau, Thomas and Paillard, Joseph and Gramfort, Alexandre},
+  date = {2022-02-07},
+  eprint = {2106.13695},
+  eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2106.13695},
+  url = {http://arxiv.org/abs/2106.13695},
+  urldate = {2025-11-30},
+  abstract = {Data augmentation is a key element of deep learning pipelines, as it informs the network during training about transformations of the input data that keep the label unchanged. Manually finding adequate augmentation methods and parameters for a given pipeline is however rapidly cumbersome. In particular, while intuition can guide this decision for images, the design and choice of augmentation policies remains unclear for more complex types of data, such as neuroscience signals. Besides, class-dependent augmentation strategies have been surprisingly unexplored in the literature, although it is quite intuitive: changing the color of a car image does not change the object class to be predicted, but doing the same to the picture of an orange does. This paper investigates gradient-based automatic data augmentation algorithms amenable to class-wise policies with exponentially larger search spaces. Motivated by supervised learning applications using EEG signals for which good augmentation policies are mostly unknown, we propose a new differentiable relaxation of the problem. In the class-agnostic setting, results show that our new relaxation leads to optimal performance with faster training than competing gradient-based methods, while also outperforming gradient-free methods in the class-wise setting. This work proposes also novel differentiable augmentation operations relevant for sleep stage classification.},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {/！,Computer Science - Machine Learning},
+  file = {/home/yua/Zotero/storage/CBED3NRA/Rommel 等 - 2022 - CADDA Class-wise Automatic Differentiable Data Augmentation for EEG Signals.pdf}
+}
+
+@article{SongChunNingJiYuShenDuXueXiDeYunDongXiangXiangNaoDianXinHaoShiBieFangFa2022,
+  title = {基于深度学习的运动想象脑电信号识别方法},
+  author = {{宋春宁} and {盛勇} and {宁正高}},
+  date = {2022-04},
+  journaltitle = {传感器与微系统},
+  volume = {41},
+  number = {4},
+  pages = {125--128,133},
+  publisher = {广西大学}
+}
+
+@article{songEEGGANNetEnhancingEEG2024,
+  title = {{{EEGGAN-Net}}: Enhancing {{EEG}} Signal Classification through Data Augmentation},
+  shorttitle = {{{EEGGAN-Net}}},
+  author = {Song, Jiuxiang and Zhai, Qiang and Wang, Chuang and Liu, Jizhong},
+  date = {2024-06-21},
+  journaltitle = {Frontiers in Human Neuroscience},
+  shortjournal = {Front. Hum. Neurosci.},
+  volume = {18},
+  pages = {1430086},
+  issn = {1662-5161},
+  doi = {10.3389/fnhum.2024.1430086},
+  url = {https://www.frontiersin.org/articles/10.3389/fnhum.2024.1430086/full},
+  urldate = {2025-11-30},
+  abstract = {Background: Emerging brain-computer interface (BCI) technology holds promising potential to enhance the quality of life for individuals with disabilities. Nevertheless, the constrained accuracy of electroencephalography (EEG) signal classification poses numerous hurdles in real-world applications. Methods: In response to this predicament, we introduce a novel EEG signal classification model termed EEGGAN-Net, leveraging a data augmentation framework. By incorporating Conditional Generative Adversarial Network (CGAN) data augmentation, a cropped training strategy and a Squeeze-andExcitation (SE) attention mechanism, EEGGAN-Net adeptly assimilates crucial features from the data, consequently enhancing classification efficacy across diverse BCI tasks. Results: The EEGGAN-Net model exhibits notable performance metrics on the BCI Competition IV-2a and IV-2b datasets. Specifically, it achieves a classification accuracy of 81.3\% with a kappa value of 0.751 on the IV-2a dataset, and a classification accuracy of 90.3\% with a kappa value of 0.79 on the IV-2b dataset. Remarkably, these results surpass those of four other CNN-based decoding models. Conclusions: In conclusion, the amalgamation of data augmentation and attention mechanisms proves instrumental in acquiring generalized features from EEG signals, ultimately elevating the overall proficiency of EEG signal classification.},
+  langid = {english},
+  keywords = {/？},
+  annotation = {TLDR: The amalgamation of data augmentation and attention mechanisms proves instrumental in acquiring generalized features from EEG signals, ultimately elevating the overall proficiency of EEG signal classification.},
+  file = {/home/yua/Zotero/storage/5KXDATDC/Song 等 - 2024 - EEGGAN-Net enhancing EEG signal classification through data augmentation.pdf}
+}
+
+@thesis{SongFeiYuJiYuShiKongFenXiHeDuiBiXueXiDeYunDongXiangXiangNaoDianXinHaoJieMaYanJiu2025,
+  type = {硕士学位论文},
+  title = {基于时空分析和对比学习的运动想象脑电信号解码研究},
+  author = {{宋飞宇}},
+  namea = {{孙曜}},
+  nameatype = {collaborator},
+  date = {2025},
+  journaltitle = {基础科学;医药卫生科技;信息科技},
+  institution = {杭州电子科技大学},
+  doi = {10.27075/d.cnki.ghzdc.2025.000579},
+  url = {https://doi.org/10.27075/d.cnki.ghzdc.2025.000579},
+  urldate = {2025-11-29},
+  abstract = {运动想象(Motor imagery,MI)脑机接口(Brain-Computer Interface,BCI)系统通过解析用户在想象运动时产生的脑电信号(Electroencephalography,EEG),将用户意图转化为设备控制命令,为运动功能障碍患者提供了一种非侵入式康复交互解决方案。有效解码脑电信号对于MI-BCI系统在实际应用中具有重要意义。但是,脑电信号由于其固有的非平稳特性,在不同域中呈现出独特的特征表达,现有特征提取方法在处理时空域信息时未能充分学习到有效特征,分类精度仍有待提高。此外,固定的MI实验范式在获取高质量标注数据上存在难题,这限制了监督学习方法在实际应用中的分类精度与泛化性能。本文对运动想象脑电信号的时空特征学习问题和标注数据稀缺问题展开研究,具体工作如下: (1)针对运动想象脑电信号的时空特征学习问题,本文构建了一种多尺度时空动态注意力网络(Multi-Scale Spatio-Temporal Dynamic Attention Network,MSTDAN)。首先,该网络结合并行多尺度卷积和全局注意力机制,提取不同时间尺度下的浅层时域特征并进行动态自适应融合,有效捕获了特征间的非线性关联;其次,在空间特征提取上,设计基于方差的统计注意力机制,充分利用脑电信号的统计特性进行通道权重自适应调整,增强对关键空间特征的感知能力;最后,使用并行多尺度卷积提取深层时域特征,设计特征重组机制建立不同时间尺度特征间的动态关联,以此增强深层时域特征的捕获能力。实验结果表明,MSTDAN模型在BCIC-IV-2a、HGD数据集上的四分类任务平均分类准确率分别达到82.06\%和95.44\%,在BCIC-IV-2b数据集上的二分类任务,模型平均分类准确率达到88.06\%。 (2)针对标注数据稀缺问题,本文基于对比学习构建了一种无负样本的运动想象脑电信号解码框架。预训练阶段的设计包括数据增强、编码器网络、投影网络和损失函数四部分。基于运动想象脑电信号特性设计数据增强方法,使用线性探测策略评估不同数据增强组合对特征学习的影响,实验结果表明,随机裁剪与随机带通滤波的组合策略在所有数据集上均表现最佳,为对比学习在MI-BCI中的应用提供了有效的数据增强方案。将MSTDAN网络作为编码器,从无标签MI-EEG数据中提取时空特征。使用具有单个隐藏层的多层感知器构建投影网络。使用Barlow Twins损失函数进行对比损失计算,优化表示向量的互相关矩阵实现对比学习,减少嵌入向量间冗余信息,消除传统对比学习对大量负样本的依赖,显著降低了计算复杂度和对批量大小的敏感性。下游任务中,使用“预训练-微调”的方法进行模型训练,实验结果表明,该模型在BCIC-IV-2a、2b、HGD三个数据集上分别达到79.85\%(跨会话四分类)、86.27\%(跨会话二分类)和76.54\%(跨被试四分类)的准确率。标注数据比例影响分析表明,仅需50\%标注数据即可达到全量数据94\%以上的性能,且在跨被试任务中表现尤为突出。},
+  langid = {chinese},
+  pagetotal = {81},
+  keywords = {/！,对比学习,无负样本,时空特征,脑机接口,运动想象},
+  annotation = {major: 控制工程（专业学位）\\
+download: 46\\
+CLC: R318;TN911.7\\
+dbcode: CMFD\\
+dbname: CMFD202502\\
+filename: 1025375405.nh},
+  file = {/home/yua/Zotero/storage/R6HC89LQ/宋飞宇 - 2025 - 基于时空分析和对比学习的运动想象脑电信号解码研究.pdf}
+}
+
+@article{tianDualEncoderVAEGANSpatiotemporal2023,
+  title = {Dual-{{Encoder VAE-GAN With Spatiotemporal Features}} for {{Emotional EEG Data Augmentation}}},
+  author = {Tian, Chenxi and Ma, Yuliang and Cammon, Jared and Fang, Feng and Zhang, Yingchun and Meng, Ming},
+  date = {2023},
+  journaltitle = {IEEE Transactions on Neural Systems and Rehabilitation Engineering},
+  shortjournal = {IEEE Trans. Neural Syst. Rehabil. Eng.},
+  volume = {31},
+  pages = {2018--2027},
+  issn = {1534-4320, 1558-0210},
+  doi = {10.1109/TNSRE.2023.3266810},
+  url = {https://ieeexplore.ieee.org/document/10102265/},
+  urldate = {2025-11-30},
+  abstract = {The current data scarcity problem in EEG-based emotion recognition tasks leads to difficulty in building high-precision models using existing deep learning methods. To tackle this problem, a dual encoder variational autoencoder-generative adversarial network (DEVAE-GAN) incorporating spatiotemporal features is proposed to generate high-quality artificial samples. First, EEG data for different emotions are preprocessed as differential entropy features under five frequency bands and divided into segments with a 5s time window. Secondly, each feature segment is processed in two forms: the temporal morphology data and the spatial morphology data distributed according to the electrode position. Finally, the proposed dual encoder is trained to extract information from these two features, concatenate the two pieces of information as latent variables, and feed them into the decoder to generate artificial samples. To evaluate the effectiveness, a systematic experimental study was conducted in this work on the SEED dataset. First, the original training dataset is augmented with different numbers of generated samples; then, the augmented training datasets are used to train the deep neural network to construct the sentiment model. The results show that the augmented datasets generated by the proposed method have an average accuracy of 97.21\% on all subjects, which is a 5\% improvement compared to the original dataset, and the similarity between the generated data and the original data distribution is proved. These results demonstrate that our proposed model can effectively learn the distribution of raw data to generate high-quality artificial samples, which can effectively train a high-precision affective model.},
+  langid = {english},
+  keywords = {/！},
+  annotation = {TLDR: The results demonstrate that the proposed dual encoder variational autoencoder-generative adversarial network can effectively learn the distribution of raw data to generate high-quality artificial samples, which can effectively train a high-precision affective model.},
+  file = {/home/yua/Zotero/storage/QZLB3FE4/Tian 等 - 2023 - Dual-Encoder VAE-GAN With Spatiotemporal Features for Emotional EEG Data Augmentation.pdf}
+}
+
+@thesis{WangTianYuJiYuNaoDianXinHaoZengQiangYuShiKongTeZhengRongHeDeQingXuShiBie2024,
+  type = {硕士论文},
+  title = {基于脑电信号增强与时空特征融合的情绪识别},
+  author = {{王天宇}},
+  date = {2024},
+  institution = {青岛理工大学}
+}
+
+@thesis{WangXinRanMianXiangKuaShiDuanNaoWenShiBieDeYuFanHuaFangFaYanJiu2025,
+  type = {硕士学位论文},
+  title = {面向跨时段脑纹识别的域泛化方法研究},
+  author = {{王欣然}},
+  namea = {{孔万增}},
+  nameatype = {collaborator},
+  date = {2025},
+  journaltitle = {基础科学;医药卫生科技;信息科技},
+  institution = {杭州电子科技大学},
+  doi = {10.27075/d.cnki.ghzdc.2025.000420},
+  url = {https://doi.org/10.27075/d.cnki.ghzdc.2025.000420},
+  urldate = {2025-11-29},
+  abstract = {基于人类脑电信号的脑纹识别作为一种新兴的生物特征识别技术,因其内在生物特征唯一性与防伪特性,已成为生物特征识别领域的研究热点。然而,脑纹识别技术在跨时段场景的实际应用中面临两大根本性挑战:一方面,脑电信号的低信噪比特性导致传统固定尺度卷积的方法难以适应跨时段的身份特征提取;另一方面,现有脑电数据普遍存在样本规模、多样性有限的问题,难以支撑模型学习具有跨时段泛化能力的域不变身份表征。本文围绕有限训练数据下跨时段脑纹识别域泛化性能提升的核心科学问题,提出以下解决方案: (1)针对现有方法特征提取颗粒度单一,难适配低信噪比的多被试、多场景以及多时段脑电数据的问题,提出基于多尺度卷积特征融合的跨时段脑纹识别方法MSCANet。通过不同尺寸的卷积核在同一层中提取多种粒度的特征,保证模型同时捕获短时局部特征和长时全局依赖特征。此外,本方法进一步结合注意力机制,提高身份识别精度。最后,方法在多个数据集上对所提模块进行对比和消融实验,验证了所提模块对提升跨时段脑纹识别准确率的重要性。 (2)针对现有脑电数据分布狭窄导致的模型泛化能力不足的问题,提出基于特征增强与对比正则化的跨时段域泛化脑纹识别方法DAGCNet。受制于脑电信号难以仿真,本方法在特征层面引入数据增强策略,通过随机权重扰动生成多分布增强样本,从而增加模型对未见分布的鲁棒性。此外,本方法进一步引入基于三元组对比学习的特征约束项,约束增强样本与原始样本在潜在空间保持身份一致性。最后,对于本方法提出的特征扰动模块以及对比学习模块进行消融实验,同时进行输入样本长度敏感性实验,验证了所提模块对DAGCNet方法的重要性。 (3)针对上述离线多尺度特征静态性与随机扰动不可控性在跨时段场景下的缺陷,提出一种基于在线可学习特征扰动的跨时段脑纹识别方法OFPCNet。该方法深度融合上述方法的多尺度特征提取架构与域泛化特征扰动思想,构建双流在线协同优化框架。本方法通过最大化原始特征和扰动特征的Gram矩阵距离,并引入身份一致性损失函数,令扰动生成器在特征空间生成身份相关的最远分布。最后,本文对OFPCNet进行对比实验和消融实验,并对不同域差异距离度量方法进行比较,同时进行样本长度敏感性实验,验证本方法提出的模块对跨时段脑纹识别方法鲁棒性提升的重要作用。},
+  langid = {chinese},
+  pagetotal = {77},
+  keywords = {/！,对比学习,数据增强,深度学习,脑纹识别,领域泛化},
+  annotation = {major: 电子信息（专业学位）\\
+download: 25\\
+CLC: R318;TN911.7\\
+dbcode: CMFD\\
+dbname: CMFD202502\\
+filename: 1025376409.nh},
+  file = {/home/yua/Zotero/storage/88UQMMPV/王欣然 - 2025 - 面向跨时段脑纹识别的域泛化方法研究.pdf}
+}
+
+@thesis{WangYaoDongJiYuKuanDuShenDuXueXiDeNaoDianXinHaoZengQiangYuYiTuShiBieYanJiu2023,
+  type = {硕士论文},
+  title = {基于宽度-深度学习的脑电信号增强与意图识别研究},
+  author = {{王耀东}},
+  date = {2023},
+  institution = {燕山大学}
+}
+
+@article{WangZiKaiYongYuYiYuZhengNaoDianShuJuZengQiangDeJuanJiZhuYiLiKuoSanMoXing2025,
+  title = {用于抑郁症脑电数据增强的卷积注意力扩散模型},
+  author = {{汪子凯} and {陈景霞} and {贾晓雯} and {赵晨}},
+  date = {2025},
+  journaltitle = {软件工程},
+  volume = {28},
+  number = {7},
+  pages = {64--68},
+  issn = {2096-1472},
+  doi = {10.19644/j.cnki.issn2096-1472.2025.007.013},
+  url = {https://doi.org/10.19644/j.cnki.issn2096-1472.2025.007.013},
+  urldate = {2025-11-29},
+  abstract = {为了解决抑郁症检测中由于脑电(Electroencephalogram, EEG)信号数据稀缺导致的分类精度不高的问题，结合去噪扩散概率模型(Denoising Diffusion Probabilistic Model, DDPM)和卷积注意力机制(Convolutional Block Attention Module, CBAM),提出了一种用于EEG数据增强的卷积注意力扩散模型(Convolutional Attention Diffusion Model, CADM)。在MODMA数据集上，生成了与原始EEG信号数据分布相似的时频特征，以扩充训练数据集，并利用Vision Transformer、MLP和SVM模型进行抑郁症分类。实验结果显示，增强后的数据集在3个分类器上的准确率分别提高了10.99\%、3.88\%和5.50\%,证明模型生成的特征具有良好的鲁棒性，有效提升了EEG抑郁症检测的准确性和稳定性。},
+  langid = {chinese},
+  keywords = {/！,卷积注意力模块,去噪扩散概率模型,抑郁症检测,数据增强,脑电信号},
+  annotation = {original-container-title: Software Engineering\\
+foundation: 国家自然科学基金项目(61806118)； 陕西科技大学博士科研启动基金项目(2020 BJ-30)；\\
+download: 84\\
+CLC: TN911.7;R749.4\\
+dbcode: CJFQ\\
+dbname: CJFDLAST2025\\
+filename: ZGGC202507013\\
+publicationTag: JST\\
+CIF: 1.57\\
+AIF: 0.68},
+  file = {/home/yua/Zotero/storage/PZ6VYJTU/汪子凯 等 - 2025 - 用于抑郁症脑电数据增强的卷积注意力扩散模型.pdf}
+}
+
+@thesis{WuDiJiYuNaoDianTuXinXiFenXiDeNaoPiLaoYanJiu2008,
+  type = {硕士学位论文},
+  title = {基于脑电图信息分析的脑疲劳研究},
+  author = {{吴镝}},
+  namea = {{陈志华}},
+  nameatype = {collaborator},
+  date = {2008},
+  institution = {大连交通大学},
+  location = {大连},
+  url = {https://kns.cnki.net/kcms2/article/abstract?v=Jz-lw5xPjDYm3ZKCcMKQVnWvsMLD2FSPfQ0hm6KJ_HGpJ289AyjsAo_DF226TNRbdX0LiWWEiMLE71NE3uQ3O1hYWB0oDZbEL1-UcJGOAYtgJW6K2yxKulCd5PYN0QdsMHyZxhelDVA_Yvpz76wrvP23Roe-mWCNh6zM_ErbWwuSgOjGwCDKhailCsPagX37&uniplatform=NZKPT&language=CHS},
+  abstract = {脑电图(Electroencephalogram,EEG)数据记录的是人脑神经电生理活动在大脑皮层或头皮表面的总体反映,是一种真正无创伤、高时间分辨率的脑功能研究手段,目前正逐渐成为脑研究领域的热点。通过分析脑电图数据来发现脑疲劳信息是一种切实可行的方案。研究目的:本文对脑疲劳引起的人脑状态变化进行讨论。通过对客观记录的受试者脑疲劳事件的脑电图数据进行系统聚类分析,从而实现脑疲劳状态的科学判定,并且为实现脑疲劳趋势的科学预测提供理论根据和基础实验依据。研究方法:选取12名习惯用右手、健康的人进行实验,采用标准的脑电极导联系统,获取受试者在安静闭眼和摄入酒精、暗算以及听力的40个事件的脑电图数据,然后进行数据分析。数据分析的方法是系统聚类分析方法。程序实现采用独立设计的脑电图分析工具箱和聚类分析程序。研究结果:对脑电图数据聚类分析后发现,正常状态脑电活动大致按前额部和中央、后头部、颞部得到3个聚类簇。摄入少量酒精后,受试者额部电极、中央部电极以及后头部的大部分电极聚类为一个大的簇;随着摄入酒精的增加,该簇逐渐发生分解。进行暗算实验后,受试者左右脑的脑电信号出现了明显差异,形成的聚类簇大多按左右脑呈现纵向分布。进行听力实验后,受试者左右脑的脑电信号也出现了明显差异,聚类情况与暗算实验相似。研究结论:摄入少量酒精会使人前后头部脑电信号的相关性增强。同时,由于在4～30Hz中通常α波是最强的成分,所以在少量酒精的作用下,前头部的α波在增加,α波呈现扩大和增强的趋势。但是,当饮酒量的持续增加以后,原有的簇逐渐发生分解,这说明人脑各个部位的平衡性、稳定性逐渐下降,人脑受抑制的程度、脑疲劳程度增加。由于左脑负责数学计算和语言理解等功能,因此,在暗算和听广播过程中左脑会处于不同程度的疲劳状态,导致左右脑脑相关性逐渐减弱,使得聚类簇大多按左右脑呈现纵向分布。},
+  langid = {chinese},
+  keywords = {聚类分析,脑电图,脑疲劳},
+  annotation = {CNKICite: 19},
+  file = {/home/yua/Zotero/storage/9DTWLETK/基于脑电图信息分析的脑疲劳研究.pdf;/home/yua/Zotero/storage/FNQTLXRY/基于深度学习的脑电信号情感识别研究.pdf}
+}
+
+@article{XiaoNanJiYuXinXiZuiDaHuaShengChengDuiKangWangLuoDeYunDongXiangXiangNaoDianXinHaoShuJuZengQiang2025,
+  title = {基于信息最大化生成对抗网络的运动想象脑电信号数据增强},
+  author = {{肖楠} and {李明爱}},
+  date = {2025-10},
+  journaltitle = {北京生物医学工程},
+  volume = {44},
+  number = {5},
+  pages = {449--456},
+  publisher = {{北京工业大学信息科学技术学院(北京 100124) and 北京工业大学信息科学技术学院(北京 100124);计算智能与智能系统北京市重点实验室(北京 100124);数字社区教育部工程研究中心(北京 100124)}},
+  keywords = {/！,数据增强,深度卷积神经网络,生成对抗网络,运动想象信号},
+  file = {/home/yua/Zotero/storage/XMQ2FQ9D/肖楠和李明爱 - 2025 - 基于信息最大化生成对抗网络的运动想象脑电信号数据增强.pdf}
+}
+
+@thesis{XiaXiuXinJiYuShenDuXueXiDeXiuJueWeiJueYuLianJueNaoDianShuJuShiBieFangFaYanJiu2025,
+  type = {博士学位论文},
+  title = {基于深度学习的嗅觉、味觉与联觉脑电数据识别方法研究},
+  author = {{夏秀鑫}},
+  namea = {{门洪}},
+  nameatype = {collaborator},
+  date = {2025},
+  journaltitle = {基础科学;医药卫生科技;信息科技},
+  institution = {东北电力大学},
+  doi = {10.27008/d.cnki.gdbdc.2025.000007},
+  url = {https://doi.org/10.27008/d.cnki.gdbdc.2025.000007},
+  urldate = {2025-11-29},
+  abstract = {嗅觉、味觉以及嗅-味联觉脑电研究对于工程应用和学术研究而言有着不可忽视的意义。在工程应用范畴内,脑电技术可在感官评价方面给予食品、化妆品等行业精准的技术支持,推动个性化产品的开发以及质量控制工作,以此契合消费者对于多感官体验的需求。在学术研究领域,揭示嗅觉、味觉以及嗅-味联觉感知的神经机制有利于更深入地理解大脑对多感官信息的整合方式,推动神经科学与认知科学不断向前发展。然而当前的研究面临着不少挑战,例如特征挖掘不够充分、跨被试者识别存在障碍、数据比较稀缺、电极存在冗余、多感官解码面临困难等情况,这些问题极大限制了脑电技术的发展。为了克服这些挑战,本研究依靠深度学习技术,提出了一系列创新的方法,切实提高了脑电信号解码的精准度与稳定性,并且指出多感官感知的神经机制,为食品感官评价与神经科学研究提供了技术方面的支持以及理论上的指导。具体的工作内容如下: (1)嗅觉脑电信号特征挖掘存在不足,为此提出一种频段注意力网络模型,此模型引入频段特征挖掘模块以及自注意力机制,可高效捕捉整合多频段嗅觉脑电信号的深层次特征,有效提升气味分类的准确性与稳定性。实验结果显示,该模型在嗅觉脑电数据集上的分类性能比现有先进方法更优,准确率达98.92\%,F1分数为98.75\%,呈现出良好的性能优势。消融实验验证了模型中关键模块的有效性,多头注意力机制在提高模型表现以及挖掘频段间特征关系方面发挥了关键作用,该模型为嗅觉脑电分析提供了新的技术路径,也为未来多频段脑电特征研究的发展奠定了基础。 (2)为突破跨被试者嗅觉偏好识别方面的限制,本研究构思出一种基于嗅觉脑电和电子鼻信号的多模态脑-机协同感知方法,该方法将电子鼻在气味物理化学特性呈现方面的长处与脑电信号对情感偏好表达的优势相结合,有效克服了单一信号在跨被试识别任务中的不足,实验所得结果显示,所提出来的多模态协同感知方法在跨被试者嗅觉偏好识别任务中的分类准确率以及F1分数分别是92.79\%和92.64\%,优于当下主流的多模态数据识别方法,有助于推动嗅觉偏好评估领域的技术发展,还为未来多模态感官分析研究开拓了新的思考方向。 (3)本研究针对味觉脑电数据量匮乏的难题,提出了时空重构数据增强方法,此方法通过提高原始数据在时空维度的特征,丰富了味觉脑电特征的多样性,同时结合多视角通道注意力机制,对味觉脑电中的冗余信息进行精细化处理,有效提升了数据质量与模型的泛化能力。实验结果显示,采用该数据增强方法后,模型的分类准确性从98.10\%提升至99.56\%,F1分数从98.09\%提升至99.48\%,比其他先进方法更优。该方法能有效提升模型对味觉脑电的解码性能,成功达成对酸、甜、苦、咸四种基本味道的精确解码,在解决味觉脑电数据不足问题之际,也为复杂味觉感知研究与分析给予了坚实的技术支撑。 (4)在关于味觉脑电信号的电极选择研究工作中,本研究提出了一种基于注意力的类激活映射方法,此方法将梯度加权类激活映射技术与通道-空间注意力卷积神经网络相结合,凭借精确定位与味觉有关的关键电极区域,可自动选择影响味觉信号识别的关键电极,切实降低了非关键电极的计算权重,使得整体计算的复杂度有所减少。实验得出的结果显示,当运用所提出的电极选择策略将电极数量精简到12个时,计算量降低了41.18\%,模型的准确率以及F1分数分别是97.55\%和97.52\%,和使用全部电极时相比,准确率和F1分数仅分别降低了0.44\%和0.43\%。该方法能有效选择关键电极,又能在极大降低计算复杂度的情况下维持模型出色的分类性能,为味觉脑电信号分析给予了一种兼具精准性与高效性的解决方法。 (5)一种基于局部-全局融合的网络模型被提出,该模型着重于嗅-味联觉脑电解码,以实现对气味增强甜味感知的定量分析。此模型通过整合局部特征的细粒度表征能力和全局特征的整体感知能力,精确捕获风味所引发的复杂脑电信号变化,在甜味感知量化任务中呈现出良好性能。实验结果显示,该模型的R2分数达到0.911,其预测的感官甜度和实际感官甜度之间存在很高的相关性,证实了模型在精准预测方面的优势。该模型在误差控制方面也表现出色,均方误差是0.027,平均绝对误差为0.063,都低于其他先进模型,突出了其在减少预测误差方面的良好能力,与现有方法相比,该模型在多感官解码任务中的表现更优,有效提升了甜味感知的量化精度,还为嗅觉与味觉协同作用的机制研究提供了新的视角和理论支撑。 本研究运用深度学习技术,成功解决了嗅觉、味觉以及嗅-味联觉脑电信号分析过程中的关键问题,使得信号解码的精度与稳定性得以提升,所提出的创新方法包含多频段特征挖掘、脑-机协同感知、时空数据增强、精细化电极选择以及多感官解码等方面,拓展了嗅觉、味觉与嗅-味联觉脑电信号分析的技术范围,为多感官感知研究提供了新的方法支持,也为食品感官评价和神经科学应用奠定了关键基础。},
+  langid = {chinese},
+  pagetotal = {120},
+  keywords = {味觉脑电,嗅觉脑电,多频段特征,数据增强,联觉脑电,跨被试者识别},
+  annotation = {major: 控制科学与工程\\
+download: 279\\
+CLC: R318;TN911.7;TP18\\
+dbcode: CDFD\\
+dbname: CDFDLAST2025\\
+filename: 1025368403.nh},
+  file = {/home/yua/Zotero/storage/RQLYY8B5/夏秀鑫 - 2025 - 基于深度学习的嗅觉、味觉与联觉脑电数据识别方法研究.pdf}
+}
+
+@thesis{XiongShiChengJiYuDuoFenZhiYiWeiJuanJiShenJingWangLuoDeYunDongXiangXiangNaoDianXinHaoFenLeiYanJiu2023,
+  type = {硕士论文},
+  title = {基于多分支一维卷积神经网络的运动想象脑电信号分类研究},
+  author = {{熊世成}},
+  date = {2023},
+  institution = {河北大学}
+}
+
+@thesis{YanYiHaoJiYuZiJianDuBiaoZhengXueXiDeNaoDianXinHaoFenXiYuSuanFaYanJiu2024,
+  type = {硕士论文},
+  title = {基于自监督表征学习的脑电信号分析与算法研究},
+  author = {{颜怡好}},
+  date = {2024},
+  institution = {齐鲁工业大学}
+}
+
+@thesis{YaoLuYuanJiYuShenDuXueXiDeNaoDianXinHaoShuiMianFenQiFangFaYanJiu2023,
+  type = {硕士论文},
+  title = {基于深度学习的脑电信号睡眠分期方法研究},
+  author = {{姚璐媛}},
+  date = {2023},
+  institution = {兰州理工大学}
+}
+
+@article{yeSemiSupervisedDualStreamSelfAttentive2025,
+  title = {Semi-{{Supervised Dual-Stream Self-Attentive Adversarial Graph Contrastive Learning}} for {{Cross-Subject EEG-Based Emotion Recognition}}},
+  author = {Ye, Weishan and Zhang, Zhiguo and Teng, Fei and Zhang, Min and Wang, Jianhong and Ni, Dong and Li, Fali and Xu, Peng and Liang, Zhen},
+  date = {2025-01},
+  journaltitle = {IEEE Transactions on Affective Computing},
+  shortjournal = {IEEE Trans. Affective Comput.},
+  volume = {16},
+  number = {1},
+  pages = {290--305},
+  issn = {1949-3045, 2371-9850},
+  doi = {10.1109/TAFFC.2024.3433470},
+  url = {https://ieeexplore.ieee.org/document/10609510/},
+  urldate = {2025-11-30},
+  langid = {english},
+  keywords = {/！},
+  annotation = {TLDR: A semi-supervised Dual-stream Self-attentive Adversarial Graph Contrastive learning framework is proposed to tackle the challenge of limited labeled data in cross-subject EEG-based emotion recognition and demonstrates its effectiveness in addressing the label scarcity problem in cross-subject EEG-based emotion recognition.},
+  file = {/home/yua/Zotero/storage/YQMS6RH5/Ye 等 - 2025 - Semi-Supervised Dual-Stream Self-Attentive Adversarial Graph Contrastive Learning for Cross-Subject.pdf}
+}
+
+@article{YeXiaoYaEEGMFNetGuaYongYuNaoDianXinHaoFenXiDeQingLiangJiDuoFenZhiRongHeWangLuo2025,
+  title = {{{EEG-MFNet}}:适用于脑电信号分析的轻量级多分支融合网络},
+  author = {{叶晓雅} and {王秀青} and {马海滨} and {张诺飞}},
+  date = {2025-07},
+  journaltitle = {山东大学学报（理学版）},
+  volume = {60},
+  number = {7},
+  pages = {1--12},
+  publisher = {河北师范大学计算机与网络空间安全学院}
+}
+
+@article{YuanKaiFengJiYuBanJianDuVAEHeCGANDeYunDongXiangXiangNaoDianXinHaoFenLeiQi2025,
+  title = {基于半监督VAE和CGAN的运动想象脑电信号分类器},
+  author = {{袁凯烽} and {侯璐} and {黄永锋}},
+  date = {2025},
+  journaltitle = {传感器与微系统},
+  volume = {44},
+  number = {2},
+  pages = {82--86},
+  issn = {2096-2436},
+  doi = {10.13873/J.1000-9787(2025)02-0082-05},
+  url = {https://link.cnki.net/doi/10.13873/J.1000-9787(2025)02-0082-05},
+  abstract = {由于脑电(EEG)信号的特异性、隐私性，数据集相对匮乏，运动想象EEG(MI-EEG)信号分类是一项具有挑战性的任务。提出了一种基于半监督变分自编码器—条件生成对抗网络(SSVAE-CGAN)模型应用于MI-EEG信号的增强和分类。SSVAE-CGAN模型的SSVAE-CGAN的编码器为EEGNet网络，获得MI-EEG信号的时域、频域和空间域的复合特征的潜在空间表示。不同于传统的无监督变分自编码器，在训练编码器时，SSVAE-CGAN使用MI-EEG信号的标签信息以监督的方式更好地构建潜在空间。然后，SSVAE-CGAN使用条件生成对抗网络接收带有标签信息的随机噪声进行生成器—判别器的对抗训练，并生成与潜在空间分布对齐的隐空间。在真实MI-EEG数据集进行了数据增强和分类实验，实验结果验证了本文模型的有效性。},
+  langid = {chinese},
+  keywords = {/！,分类,半监督变分自编码器,数据增强,条件生成对抗网络,运动想象脑电},
+  annotation = {CNKICite: 1},
+  file = {/home/yua/Zotero/storage/FSST5USV/基于半监督VAE和CGAN的运动想象脑电信号分类器.pdf}
+}
+
+@thesis{YuZiHangJiYuShenDuXueXiDeYunDongXiangXiangNaoDianXinHaoFenLeiYanJiu2023,
+  type = {硕士论文},
+  title = {基于深度学习的运动想象脑电信号分类研究},
+  author = {{于子航}},
+  date = {2023},
+  institution = {吉林大学}
+}
+
+@thesis{ZhangJiaZhengJiYuNaoJiDianRongHeDeDanCeZhiTiYunDongXiangXiangJieMaFangFaYanJiu2025,
+  type = {硕士学位论文},
+  title = {基于脑肌电融合的单侧肢体运动想象解码方法研究},
+  author = {{张家政}},
+  namea = {{杨冰} and {孔万增}},
+  nameatype = {collaborator},
+  date = {2025},
+  journaltitle = {医药卫生科技;信息科技},
+  institution = {杭州电子科技大学},
+  doi = {10.27075/d.cnki.ghzdc.2025.001946},
+  url = {https://doi.org/10.27075/d.cnki.ghzdc.2025.001946},
+  urldate = {2025-11-29},
+  abstract = {本文旨在开发一种基于脑肌电多模态融合深度解码的康复手套系统,用于脑卒中患者上肢运动功能障碍的主动康复训练。传统的运动想象分类算法在左右手分类任务中表现出较高的准确性,广泛应用于二分类场景。然而,当面对更加精细的单侧手势识别任务时,传统方法由于缺乏神经先验机制,难以挖掘其潜在特征信息,从而导致分类性能受限。因此,如何提升单侧肢体运动意图识别的准确性成为当前研究的重要挑战。针对这个问题,本研究结合脑电信号(EEG)和肌电信号(EMG),通过多模态数据融合提升单侧肢体运动意图识别的准确性,从而为卒中患者的康复提供精准且个性化的解决方案。以下是本研究的主要内容和创新成果: (1)针对多模态时序信号的有效融合问题,本文提出了一种基于注意力机制的脑肌电融合单侧肢体运动想象解码方法(Fusion-modal-feature-learning,FMFL)。该算法提取脑电的FBCSP特征和肌电的时域统计特征,并通过注意力机制动态分配脑电和肌电特征的权重,从而有效缓解了跨模态特征显著性差异缺失的问题。实验结果表明,在MSD-11M数据集和EEG-EMG-Gesture数据集上,FMFL相比特征拼接显著提升了分类准确率,验证了注意力机制在多模态特征融合中的关键作用。 (2)进一步针对手动提取特征难以充分挖掘脑肌电信号互补性的问题,本文提出了一种基于动态门控融合策略的多模态特征交互学习模型(Inter-modal-feature-learning,IMFL)。该模型通过深度学习自动提取EEG的时空特征和EMG的时序依赖关系,并利用双向动态门控网络实现多模态特征交互。实验结果表明,在单侧手势识别任务中,尤其是在多类别复杂分类任务中表现突出。在消融实验中,IMFL模型在大部分情况下优于其他消融模型,并且各任务的准确率都有显著提升。表明其能够充分挖掘不同模态间的互补关系,提取具有更高判别性的多模态交互特征。 (3)基于研究内容(1)和(2)的成果,本文进一步设计开发了一套面向上肢功能障碍患者的脑肌电融合康复手套系统。该系统由脑肌电数据采集模块、信号处理模块、模型训练模块以及康复手套硬件模块组成。其中,脑肌电数据采集模块负责实时采集患者的脑电和肌电信号;信号处理模块负责数据传输和预处理;模型训练模块会用预处理后的数据训练模型,用于后续的康复训练。康复手套硬件模块通过单片机控制气泵和气阀的开关,驱动气动柔性手套辅助患者完成抓握和伸展动作。该系统具有良好的可靠性,能够有效降低患者在康复训练中的受伤风险,同时提升了系统的实用性和用户体验。此外,通过融合多模态生理信号,该系统显著增强了对患者运动意图的解码能力,为卒中患者的个性化康复训练提供了新的技术支持。},
+  langid = {chinese},
+  pagetotal = {83},
+  keywords = {/！,康复手套,特征交互,肌电信号,脑电信号,运动想象},
+  annotation = {major: 电子信息（专业学位）\\
+download: 102\\
+CLC: TN911.7;R743.3\\
+dbcode: CMFD\\
+dbname: CMFD202502\\
+filename: 1025375229.nh},
+  file = {/home/yua/Zotero/storage/5N6KEZWL/张家政 - 2025 - 基于脑肌电融合的单侧肢体运动想象解码方法研究.pdf}
+}
+
+@thesis{ZhangSiYuanMianXiangWenTaiShiJueYouFaDianWeiDeNaoJieMaGeTiGuaPeiXingJiShuYanJiu2025,
+  type = {硕士学位论文},
+  title = {面向稳态视觉诱发电位的脑解码个体适配性技术研究},
+  author = {{张思源}},
+  namea = {{南姣芬}},
+  nameatype = {collaborator},
+  date = {2025},
+  journaltitle = {基础科学;医药卫生科技;信息科技},
+  institution = {郑州轻工业大学},
+  doi = {10.27469/d.cnki.gzzqc.2025.000323},
+  url = {https://doi.org/10.27469/d.cnki.gzzqc.2025.000323},
+  urldate = {2025-11-29},
+  abstract = {稳态视觉诱发电位(Steady-State Visual Evoked Potential,SSVEP)作为脑机接口(Brain-Computer Interface,BCI)的重要范式,其识别性能受个体神经响应差异性的制约。本研究围绕SSVEP识别中的个体适配性问题,从数据长度适配、滤波器组参数适配以及跨被试适配三个维度展开脑解码技术研究,主要内容如下: (1)针对个体时域响应差异性导致的数据长度适配问题,提出基于改进任务相关成分分析(Task-related Component Analysis,TRCA)的数据长度适配方法。传统SSVEP识别普遍采用预设长度(通常为0.5-1秒)的脑电信号片段进行解码,这种策略忽视了不同被试的神经响应速度差异。本研究创新性地构建自适应机制,通过协方差分析量化不同数据长度下特征的分类性能,建立数据长度-分类性能映射模型。通过在TRCA的特征提取阶段中引入与协方差分析更匹配的典型相关分析,实现特征提取过程与最优数据长度的协同优化。该方法在Benchmark数据集和BETA数据集上的解码正确率分别为97.04\%和77.21\%,与传统的TRCA方法相比分别提升了2.77\%和4.68\%。实验结果显示,该方法有效解决了预设数据长度方法在面对个体响应差异时导致解码性能下降的问题,有效提升SSVEP解码的准确率。 (2)针对滤波器组参数固化导致的个体特征失配问题,提出基于麻雀优化算法(Sparrow Search Algorithm,SSA)的TRCA滤波器组优化框架。现有SSVEP识别系统普遍采用预设参数的滤波器组技术,这种经验性的参数设置难以适配不同被试间的频域响应特性差异。本研究将群体智能优化算法引入SSVEP的信号识别中,构建SSA-TRCA双阶段优化模型:第一阶段通过SSA全局搜索确定个体最优滤波器组参数组合;第二阶段采用TRCA进行多子频带特征提取、融合与分类决策。结果表明,优化后的滤波器组使TRCA在Benchmark数据集上的识别准确率提升至91.27\%,较原始TRCA提高了1.44\%;在CA数据集上达到81.67\%,提升幅度为1.40\%。该双阶段优化模型有效缓解了由于个体差异性导致的滤波器组性能下降问题,显著增强了SSVEP信号的解码准确率。 (3)针对现有SSVEP解码技术在跨被试上适配性较差的问题,提出了一种基于特征迁移的多决策融合模型。该模型通过双域网络将源域和目标域数据映射至正弦-余弦模板,以减少跨主体域间的差异并提升迁移效果。为增强目标域主体的测试性能,采用基于源混叠矩阵估计和锁相时移的数据增强方法,以扩展目标域训练样本,并将其融入改进的集成任务相关成分分析(TRCA based on kendall,eTRCA-K)与任务判别成分分析(Task Discriminant Component Analysis,TDCA)的训练过程。最终,融合双域网络、eTRCA-K及TDCA的输出结果,用于SSVEP信号分类。实验结果表明,在数据长度为0.5s的条件下,该方法在Benchmark数据集和BETA数据集上的识别准确率分别达到78.94\%和65.69\%。相比于OS-SSVEP方法,准确率分别提升了2.41\%和1.73\%。结果表明,该方法有效缓解了跨受试者特征迁移过程中的域间差异问题,显著提高了跨被试SSVEP解码的准确性。 综上所述,本研究从被试内和跨被试两个角度,围绕SSVEP解码过程中的个体差异性问题,进行了三项研究,解决了被试内数据长度适配、个性化参数适配以及跨被试迁移适配问题。结果表明,所提的方法在识别准确率和信息传输速率方面具有显著优势。},
+  langid = {chinese},
+  pagetotal = {63},
+  keywords = {/X,任务相关成分分析,稳态视觉诱发电位,脑电,迁移学习},
+  annotation = {major: 计算机技术（专业学位）\\
+download: 26\\
+CLC: R318;TN911.7\\
+dbcode: CMFD\\
+dbname: CMFD202502\\
+filename: 1025367942.nh},
+  file = {/home/yua/Zotero/storage/SIP5JJPZ/张思源 - 2025 - 面向稳态视觉诱发电位的脑解码个体适配性技术研究.pdf}
+}
+
+@thesis{ZhaoWeiJiYuShenDuXueXiDeNaoDianXinHaoQingGanShiBieYanJiu2021,
+  type = {硕士论文},
+  title = {基于深度学习的脑电信号情感识别研究},
+  author = {{赵伟}},
+  date = {2021},
+  institution = {天津大学}
+}
+
+@thesis{ZhengHaoJiYuNaoDianXinHaoDeShuJuZengQiangHeQingXuShiBieFangFaYanJiu2022,
+  type = {硕士论文},
+  title = {基于脑电信号的数据增强和情绪识别方法研究},
+  author = {{郑浩}},
+  date = {2022},
+  institution = {北京交通大学}
+}
+
+@article{ZhengMinMinYiZhongDuoChiDuTeZhengRongHeYunDongXiangXiangNaoDianXinHaoFenLeiSuanFaJiYuShiPinYuShuJuZengQiang2025,
+  title = {一种多尺度特征融合运动想象脑电信号分类算法——基于时频域数据增强},
+  author = {{郑敏敏} and {钱政康} and {赵桐}},
+  date = {2025},
+  journaltitle = {莆田学院学报},
+  volume = {32},
+  number = {2},
+  pages = {52--60, 70},
+  issn = {1672-4143},
+  url = {https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2025&filename=PTGZ202502010},
+  urldate = {2025-11-29},
+  abstract = {针对传统的脑电信号识别算法样本量较小、识别分类准确率较低的问题，提出了一种基于时频域数据增强的多尺度特征融合运动想象脑电信号分类算法。对原始信号进行独立主成分分析滤除眼电噪声，并进行时域和频域的数据增强，将原始数据、时域增强数据、频域增强数据三组数据分别进行多尺度多频带的共空间模式、功率谱密度以及小波包能量特征提取，合并特征并通过特征选择得到最佳特征组，训练支持向量机，由投票得出最终分类结果。在公开数据集BCI CompetitionⅣ-2a和OpenBMI上进行验证，结果表明提出的方法分类效果良好，分类准确率高于其他对比方法。},
+  langid = {chinese},
+  keywords = {/！,共空间模式,支持向量机,数据增强,运动想象},
+  annotation = {original-container-title: Journal of Putian University\\
+foundation: 福建省科技厅面上项目(2021J011108)； 莆田学院科研启动项目(2023058);莆田学院研究生科研创新项目(科技类)(yjs2024057)；\\
+download: 228\\
+CLC: TN911.7;R318\\
+dbcode: CJFQ\\
+dbname: CJFDLAST2025\\
+filename: PTGZ202502010\\
+CIF: 0.38\\
+AIF: 0.239},
+  file = {/home/yua/Zotero/storage/DE86G8DL/郑敏敏 等 - 2025 - 一种多尺度特征融合运动想象脑电信号分类算法——基于时频域数据增强.pdf}
+}
+
+@article{zhengMotorImageryEEG2025,
+  title = {Motor Imagery {{EEG}} Classification via Wavelet-Packet Synthetic Augmentation and Entropy-Based Channel Selection},
+  author = {Zheng, Minmin and Qian, Zhengkang and Zhao, Tong},
+  date = {2025-11-10},
+  journaltitle = {Frontiers in Neuroscience},
+  shortjournal = {Front. Neurosci.},
+  volume = {19},
+  pages = {1689647},
+  issn = {1662-453X},
+  doi = {10.3389/fnins.2025.1689647},
+  url = {https://www.frontiersin.org/articles/10.3389/fnins.2025.1689647/full},
+  urldate = {2025-11-30},
+  abstract = {Introduction               Motor-imagery (MI) brain–computer interfaces often suffer from limited EEG datasets and redundant channels, hampering both accuracy and clinical usability. We address these bottlenecks by presenting a unified framework that simultaneously boosts classification performance, reduces the number of required sensors, and eliminates the need for extra recordings.                                         Methods               A three-stage pipeline is proposed. (1) Wavelet-packet decomposition (WPD) partitions each MI class into low-variance “stable” and high-variance “variant” trials; sub-band swapping between matched pairs generates synthetic trials that preserve event-related desynchronization/synchronization signatures. (2) Channel selection uses wavelet-packet energy entropy (WPEE) to quantify both spectral-energy complexity and class-separability; the top-ranked leads are retained. (3) A lightweight multi-branch network extracts multi-scale temporal features through parallel dilated convolutions, refines spatial patterns via depth-wise convolutions, and feeds the fused spatiotemporal tensor to a Transformer encoder with multi-head self-attention; soft-voted fully-connected layers deliver robust class labels.                                         Results                                On BCI Competition IV 2a and PhysioNet MI datasets the proposed method achieves 86.81 and 86.64\% mean accuracies, respectively, while removing 27\% of sensors. These results outperform the same network trained on all 22 channels, and paired                 t                 -tests confirm significant improvements (                 p                 \,\&lt;\,0.01).                                                        Discussion               Integrating WPD-based augmentation with WPEE-driven channel selection yields higher MI decoding accuracy with fewer channels and without extra recordings. The framework offers a computationally efficient, clinically viable paradigm for enhanced EEG classification in resource-constrained settings.},
+  langid = {english},
+  keywords = {/X},
+  file = {/home/yua/Zotero/storage/6TLWRZFN/Zheng 等 - 2025 - Motor imagery EEG classification via wavelet-packet synthetic augmentation and entropy-based channel.pdf}
+}
+
+@article{zhouAutoAugHARAutomatedData2024,
+  title = {{{AutoAugHAR}}: {{Automated Data Augmentation}} for {{Sensor-based Human Activity Recognition}}},
+  shorttitle = {{{AutoAugHAR}}},
+  author = {Zhou, Yexu and Zhao, Haibin and Huang, Yiran and Röddiger, Tobias and Kurnaz, Murat and Riedel, Till and Beigl, Michael},
+  date = {2024-05-13},
+  journaltitle = {Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies},
+  shortjournal = {Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.},
+  volume = {8},
+  number = {2},
+  pages = {1--27},
+  issn = {2474-9567},
+  doi = {10.1145/3659589},
+  url = {https://dl.acm.org/doi/10.1145/3659589},
+  urldate = {2025-11-30},
+  abstract = {Sensor-based HAR models face challenges in cross-subject generalization due to the complexities of data collection and annotation, impacting the size and representativeness of datasets. While data augmentation has been successfully employed in domains like natural language and image processing, its application in HAR remains underexplored. This study presents AutoAugHAR, an innovative two-stage gradient-based data augmentation optimization framework. AutoAugHAR is designed to take into account the unique attributes of candidate augmentation operations and the unique nature and challenges of HAR tasks. Notably, it optimizes the augmentation pipeline during HAR model training without substantially extending the training duration. In evaluations on eight inertial-measurement-units-based benchmark datasets using five HAR models, AutoAugHAR has demonstrated superior robustness and effectiveness compared to other leading data augmentation frameworks. A salient feature of AutoAugHAR is its model-agnostic design, allowing for its seamless integration with any HAR model without the need for structural modifications. Furthermore, we also demonstrate the generalizability and flexible extensibility of AutoAugHAR on four datasets from other adjacent domains. We strongly recommend its integration as a standard protocol in HAR model training and will release it as an open-source tool1.},
+  langid = {english},
+  keywords = {/X},
+  annotation = {TLDR: An innovative two-stage gradient-based data augmentation optimization framework designed to take into account the unique attributes of candidate augmentation operations and the unique nature and challenges of HAR tasks, AutoAugHAR has demonstrated superior robustness and effectiveness compared to other leading data augmentation frameworks.},
+  file = {/home/yua/Zotero/storage/S2PNDPG9/Zhou 等 - 2024 - AutoAugHAR Automated Data Augmentation for Sensor-based Human Activity Recognition.pdf}
+}
+
+@article{zhouAutoAugHARAutomatedData2024,
+  title = {{{AutoAugHAR}}: Automated Data Augmentation for Sensor-Based Human Activity Recognition},
+  shorttitle = {{{AutoAugHAR}}},
+  author = {Zhou, Yexu and Zhao, Haibin and Huang, Yiran and Röddiger, Tobias and Kurnaz, Murat and Riedel, Till and Beigl, Michael},
+  date = {2024-05},
+  journaltitle = {Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies},
+  shortjournal = {Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.},
+  volume = {8},
+  number = {2},
+  pages = {1--27},
+  issn = {2474-9567},
+  doi = {10.1145/3659589},
+  url = {https://dl.acm.org/doi/10.1145/3659589},
+  urldate = {2025-11-30},
+  abstract = {Sensor-based HAR models face challenges in cross-subject generalization due to the complexities of data collection and annotation, impacting the size and representativeness of datasets. While data augmentation has been successfully employed in domains like natural language and image processing, its application in HAR remains underexplored. This study presents AutoAugHAR, an innovative two-stage gradient-based data augmentation optimization framework. AutoAugHAR is designed to take into account the unique attributes of candidate augmentation operations and the unique nature and challenges of HAR tasks. Notably, it optimizes the augmentation pipeline during HAR model training without substantially extending the training duration. In evaluations on eight inertial-measurement-units-based benchmark datasets using five HAR models, AutoAugHAR has demonstrated superior robustness and effectiveness compared to other leading data augmentation frameworks. A salient feature of AutoAugHAR is its model-agnostic design, allowing for its seamless integration with any HAR model without the need for structural modifications. Furthermore, we also demonstrate the generalizability and flexible extensibility of AutoAugHAR on four datasets from other adjacent domains. We strongly recommend its integration as a standard protocol in HAR model training and will release it as an open-source tool1.},
+  langid = {english},
+  keywords = {/X},
+  annotation = {TLDR: An innovative two-stage gradient-based data augmentation optimization framework designed to take into account the unique attributes of candidate augmentation operations and the unique nature and challenges of HAR tasks, AutoAugHAR has demonstrated superior robustness and effectiveness compared to other leading data augmentation frameworks.},
+  file = {/home/yua/Zotero/storage/2BDA42PZ/Zhou 等 - 2024 - AutoAugHAR Automated Data Augmentation for Sensor-based Human Activity Recognition.pdf}
+}

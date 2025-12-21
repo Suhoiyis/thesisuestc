@@ -83,7 +83,7 @@
       <file>EEG.bcf</file>
     </requires>
     <requires type="editable">
-      <file>eeg.bib</file>
+      <file>zotero.bib</file>
     </requires>
   </external>
 </requests>
