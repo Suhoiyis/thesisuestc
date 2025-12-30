@@ -17,6 +17,17 @@
 \usepackage{tabularx}  % 用于自适应宽度的表格
 \usepackage{multirow}  % 如果需要合并行（可选，虽然本表暂时没用合并）
 
+\usepackage{amsmath}   % 如果你之前没加这个包，需要加上，它提供了 \numberwithin 命令
+
+% 1. 让图片计数器随 section (节) 变化，每新的一节重新计数
+\numberwithin{figure}{section}
+
+% 2. 让表格计数器随 section (节) 变化，每新的一节重新计数
+\numberwithin{table}{section}
+
+\renewcommand{\thefigure}{\thesection-\arabic{figure}}
+\renewcommand{\thetable}{\thesection-\arabic{table}}
+
 \usepackage[hidelinks]{hyperref} % 隐藏所有链接框和颜色
 \usepackage[backend=biber,style=gb7714-2015,doi=false,url=false,isbn=false,gbpub=false,gbtype=false]{biblatex}
 \addbibresource{zotero.bib} % ← 请确保此 .bib 文件存在
@@ -45,13 +56,13 @@
 \maketitle
 
 \begin{abstract}
-\noindent\textbf{【摘要】} 脑电图（Electroencephalogram,EEG）信号固有的小样本、低信噪比、非平稳性及显著个体差异等特性，严重制约了深度学习模型的泛化能力，使数据增强成为提升鲁棒性的关键技术。本文从软件工程与机器学习交叉视角出发，系统梳理EEG数据增强的四阶段演进脉络：从基于信号处理的确定性增强，到基于样本插值的正则化增强，再到基于生成模型（GAN/扩散模型）的概率生成增强，最终发展为以自监督与对比学习为核心的隐式增强范式。本文的核心贡献在于：（1）提出统一的四范式分类框架；（2）揭示表征物理约束、评估维度缺失与部署资源权衡三大工程挑战；（3）通过极端小样本、类别不平衡、高个体差异与实时性约束四类典型数据困境，实证分析各类增强方法的有效性边界；（4）展望轻量化生成、多模态引导与标准化评估等未来方向，推动EEG数据增强从“经验技巧”迈向“可验证、可部署的工程实践”。
+\noindent\textbf{【摘要】} 脑电图（Electroencephalogram, EEG）信号具备样本规模有限、信噪比偏低、非平稳性明显以及个体间差异显著等特点，这些特共同制约了深度学习模型在处理此类数据时的泛化性能。因此，数据增强技术成为提升模型鲁棒性与适应能力的关键途径。本文从软件工程与机器学习相结合的跨学科视角，对EEG数据增强技术的演进脉络进行了系统梳理，并将其发展历程划分为四个递进的阶段。演进过程起始于依赖信号处理理论的确定性增强方法，随后过渡至基于样本插值的正则化增强策略，进而发展为以生成对抗网络及扩散模型为代表的概率生成增强技术，最终演进至当前以前沿的自监督学习与对比学习为核心的隐式增强范式。本文的核心学术贡献主要体现在以下四个方面：其一，本文提出了一个能够统一描述该领域技术发展的四范式分类框架；其二，本文揭示了其中存在的三大关键工程挑战，即表征物理约束的有效融入、系统性评估维度的相对缺失，以及实际部署中资源消耗与性能的权衡问题；其三，本文通过设定极端小样本、类别不平衡、高个体差异性以及实时性约束四类典型的数据困境与应用场景，实证性地剖析并界定了不同增强方法的有效性与适用边界；其四，本文进一步展望了未来若干关键研究方向，包括轻量化生成技术、多模态信息引导增强以及标准化评估体系的构建，旨在推动EEG数据增强技术从依赖经验的技巧性实践，转变为具备可验证性与可部署性的系统性工程实践。
 \\[0.5em]
 \noindent\textbf{关键词：} 脑电图；数据增强；生成模型；自监督学习；工程评估;
 \end{abstract}
 
 \begin{abstract}
-\noindent\textbf{Abstract:} The inherent characteristics of Electroencephalogram (EEG) signals—such as small sample sizes, low signal-to-noise ratio, non-stationarity, and significant inter-subject variability—severely limit the generalization capability of deep learning models, making data augmentation a key technology for enhancing robustness. From the cross-perspective of software engineering and machine learning, this paper systematically reviews the four-stage evolutionary trajectory of EEG data augmentation: from deterministic augmentation based on signal processing, to regularization augmentation based on sample interpolation, then to probabilistic generative augmentation based on generative models (GAN/Diffusion Models), and finally developing into an implicit augmentation paradigm centered on self-supervised and contrastive learning. The core contributions of this paper include: (1) proposing a unified four-paradigm classification framework; (2) revealing three major engineering challenges: representation physical constraints, lack of evaluation dimensions, and deployment resource trade-offs; (3) empirically analyzing the effectiveness boundaries of various augmentation methods through four typical data dilemmas: extreme small samples, class imbalance, high inter-subject variability, and real-time constraints; (4) looking forward to future directions such as lightweight generation, multimodal guidance, and standardized evaluation, promoting the transition of EEG data augmentation from "empirical tricks" to "verifiable and deployable engineering practices".
+\noindent\textbf{Abstract:} The inherent characteristics of Electroencephalogram (EEG) signals—such as small sample sizes, low signal-to-noise ratio, non-stationarity, and signifi-cant inter-subject variability—severely limit the generalization capability of deep learning models, making data augmentation a key technology for enhancing robustness. From the cross-perspective of software engineering and machine learning,this paper systematically reviews the four-stage evolutionary trajectory of EEG data augmentation: from deterministic augmentation based on signal processing,to regularization augmentation based on sample interpolation, then to probabilis-tic generative augmentation based on generative models (GAN/Diffusion Models),and finally developing into an implicit augmentation paradigm centered on self-supervised and contrastive learning. The core contributions of this paper include:(1) proposing a unified four-paradigm classification framework; (2) revealing three major engineering challenges: representation physical constraints, lack of evalu-ation dimensions, and deployment resource trade-offs; (3) empirically analyzing the effectiveness boundaries of various augmentation methods through four typical data dilemmas: extreme small samples, class imbalance, high inter-subject vari-ability, and real-time constraints; (4) looking forward to future directions such as lightweight generation, multimodal guidance, and standardized evaluation, promot-ing the transition of EEG data augmentation from empirical tricks to verifiable and deployable engineering practices .
 \\[0.5em]
 \noindent\textbf{Key words:} Electroencephalogram; Data Augmentation; Generative Models; Self-supervised Learning; Engineering Evaluation
 \end{abstract}
@@ -66,29 +77,31 @@
 \section{引言}
 
 \subsection{EEG数据分析的独特挑战}
-脑电图（Electroencephalogram,EEG）作为一种非侵入式、高时间分辨率的脑活动监测手段，在脑机接口、神经疾病诊断和认知科学研究中扮演着不可或缺的角色。然而，基于EEG的深度学习模型在实际部署中，面临着源于数据本身的一系列独特挑战。
+脑电作为一种非侵入式的神经生理监测技术，以其毫秒级的高时间分辨率特性，成为探测大脑活动的重要工具。该技术在脑机接口系统、神经系统疾病辅助诊断以及认知机理研究等诸多领域，均发挥着不可替代的关键作用。
 
-首先，EEG信号固有的低信噪比和非平稳性是其首要难点。大脑的电生理活动极易被眼电、肌电等伪迹所污染，且其统计特性会随时间推移而发生变化\cite{heDataAugmentationDeep2021}。这种“脆弱”的特性对模型的鲁棒性提出了极高要求。
+然而，基于EEG信号构建的深度学习模型在迈向实际应用时，首先面临着一系列源于数据本质属性的严峻挑战。其中，EEG信号固有的低信噪比与显著的非平稳性构成核心难点。具体而言，大脑皮层产生的微弱电信号极易受到来自眼动、肌肉收缩等多种生理伪迹的干扰与污染\cite{heDataAugmentationDeep2021}。与此同时，信号的统计特征会随被试者的生理状态、注意力水平及实验环境等因素而随时间动态变化。这种敏感且易变的 脆弱 属性，对模型的鲁棒性与泛化能力提出了极高的要求。
 
-其次，个体间与会话间的显著差异构成了泛化的主要障碍。不同受试者之间的大脑解剖结构与功能连接模式存在差异，甚至同一受试者在不同实验会话中的心理状态和环境因素都会导致EEG数据分布漂移，这使得在一个被试或会话上训练的优秀模型，在另一个上可能表现急剧下降~\cite{liuDomainAdaptationCrossSubject2021,WangXinRanMianXiangKuaShiDuanNaoWenShiBieDeYuFanHuaFangFaYanJiu2025}。
+其次，个体间以及同一受试者不同会话间存在的显著差异，构成了模型实现跨主体与跨会话泛化的核心障碍。具体而言，不同受试者的大脑在解剖结构、功能连接模式等方面均存在固有差异。此外，即便是同一个体，其在不同实验会话中的心理状态、注意力集中度乃至环境因素的变化，均可能导致所采集EEG数据的概率分布发生漂移\cite{liuDomainAdaptationCrossSubject2021,WangXinRanMianXiangKuaShiDuanNaoWenShiBieDeYuFanHuaFangFaYanJiu2025}。这种由主体内与主体间变异性所导致的数据分布不一致性，使得在单一被试或有限会话数据上训练并表现优异的模型，在面对新被试或新会话数据时，其性能往往会出现显著衰退。
 
-更为根本性的挑战在于标注数据的极端稀缺性与高昂的获取成本。与ImageNet等拥有海量标注数据的计算机视觉任务不同，EEG数据的采集需要专业的设备与严格的环境控制，且需要专家进行精细的标注~\cite{XiaXiuXinJiYuShenDuXueXiDeXiuJueWeiJueYuLianJueNaoDianShuJuShiBieFangFaYanJiu2025,HuWenRongJiYuShuJuZengQiangHeShenDuShenJingWangLuoDeDianXianJianCeYanJiu2025}。例如，在运动想象、情绪识别等任务中，每次试验仅能产生一个有效的标签，导致数据集规模通常仅有数十到数百个样本~\cite{ZhangJiaZhengJiYuNaoJiDianRongHeDeDanCeZhiTiYunDongXiangXiangJieMaFangFaYanJiu2025}。这种“小样本困境”使得复杂的深度神经网络极易陷入严重的过拟合，难以学习到具有泛化能力的本质特征。
+更为根本的挑战在于专家标注数据的极端稀缺性及其高昂的获取成本。与ImageNet等具备海量标注资源的计算机视觉任务不同，EEG数据的采集依赖于专业设备与受控环境，其数据标注需依赖领域专家\cite{XiaXiuXinJiYuShenDuXueXiDeXiuJueWeiJueYuLianJueNaoDianShuJuShiBieFangFaYanJiu2025,HuWenRongJiYuShuJuZengQiangHeShenDuShenJingWangLuoDeDianXianJianCeYanJiu2025}。以运动想象或情绪识别等任务为例，单次试验通常仅能对应一个有效标签，这直接导致多数数据集仅包含数十至数百个样本\cite{ZhangJiaZhengJiYuNaoJiDianRongHeDeDanCeZhiTiYunDongXiangXiangJieMaFangFaYanJiu2025}。此种小样本困境使得复杂的深度网络极易因参数过多而陷入过拟合，难以捕获具有稳健泛化能力的本质特征。
+
 
 \subsection{数据增强的必要性与目标}
-面对上述挑战，数据增强技术从“数据中心化人工智能”（Data-Centric AI）的视角~\cite{moghadamDataCentricAIEEGBased2025}，提供了一条行之有效的路径。其核心目标并非如去噪、滤波等技术那样修复单个样本的质量，而是通过系统性地扩充与变换训练数据集，来模拟数据的潜在分布，从而构建一个更具多样性、包容性和鲁棒性的训练环境。
+面对上述挑战，数据增强技术从 以数据为中心的人工智能 这一视角出发\cite{moghadamDataCentricAIEEGBased2025}，提供了一条关键路径。其核心逻辑并非如传统去噪或滤波方法那样旨在提升单一样本的质量，而是通过系统性地扩充与变换训练数据集，来更充分地覆盖数据的潜在分布。这种方法旨在构建一个在分布层面上更具多样性与包容性的训练环境，从而增强模型学习的鲁棒性。
 
 具体而言，在EEG数据分析中引入数据增强旨在实现以下四个关键目标：
 \begin{enumerate}[label={（\arabic*）}, leftmargin=*]
     \item \textbf{缓解过拟合}：通过增加训练数据的多样性，迫使模型学习更普适的特征，而非记忆有限的训练样本。
-    \item \textbf{提升泛化能力}：特别是在跨被试和跨会话场景下，增强技术可以隐式地模拟个体差异，从而提升模型的域泛化性能~\cite{liuDomainAdaptationCrossSubject2021,WangXinRanMianXiangKuaShiDuanNaoWenShiBieDeYuFanHuaFangFaYanJiu2025}。
+    \item \textbf{提升泛化能力}：特别是在跨被试和跨会话场景下，增强技术可以隐式地模拟个体差异，从而提升模型的域泛化性能\cite{liuDomainAdaptationCrossSubject2021,WangXinRanMianXiangKuaShiDuanNaoWenShiBieDeYuFanHuaFangFaYanJiu2025}。
     \item \textbf{平衡类别分布}：对于某些极度不平衡的任务，增强技术可以针对性地生成少数类样本，避免模型预测偏向多数类。
-    \item \textbf{增强模型鲁棒性}：通过对原始数据施加可控的扰动（如噪声），使模型对输入数据中的微小变化不敏感，从而提升其在实际应用中的稳定性。
+    \item \textbf{增强模型鲁棒性}：对训练数据施加可控的扰动或人工噪声，引导模型学习对输入数据中非关键性微小变差保持不敏感的特性，提升模型在实际应用场景中面对未见的噪声、伪迹或分布外样本时的稳定性与可靠性。
 \end{enumerate}
 
-值得注意的是，自动化数据增强策略~\cite{cubukAutoAugmentLearningAugmentation2019}的出现，进一步将数据增强从一个依赖于专家经验的“技巧”，提升为一个可优化、可学习的模型组件，体现了其与机器学习流程深度融合的工程化趋势。
+自动化数据增强策略~\cite{cubukAutoAugmentLearningAugmentation2019}的出现，将数据增强从一个依赖于专家经验的技巧变为一个可学习的模型组件。
 
 \subsection{本文组织结构}
-本文旨在从软件工程与机器学习的交叉视角，系统梳理EEG数据增强技术的演进脉络、前沿动态与工程实践。全文结构如下：第2章按技术范式演进顺序，剖析从确定性增强、正则化增强、概率生成增强到隐式增强的四大类方法；第3章聚焦表征约束、评估陷阱与工程部署三大挑战；第4章通过典型数据困境（小样本、不平衡、个体差异、实时性）验证各类增强的有效性边界；第5章总结演进规律并展望轻量化、多模态引导与标准化评估等未来方向。为了直观展示本文的逻辑架构，图\ref{pic:1.3}详细描绘了EEG数据增强技术的演进脉络与工程实践路线。
+本文旨在融合软件工程与机器学习的跨学科视角，系统性地梳理EEG数据增强技术的演进脉络、前沿进展及其工程实践。第2章将依据技术范式的演进顺序，依次剖析确定性增强、正则化增强、概率生成增强以及隐式增强这四类核心方法；第3章重点关注表征物理约束、评估体系缺失以及工程部署瓶颈三大现实挑战；第4章则通过构建小样本、类别不平衡、高个体差异及实时性约束四类典型数据困境，检验不同增强策略的效能边界。第5章归纳总结了技术演进的内在规律，并进一步展望了轻量化生成、多模态信息引导以及标准化评估体系等关键未来研究方向。为清晰呈现本文的整体逻辑框架，图\ref{pic:roadmap}系统性地描绘了EEG数据增强技术的范式演进路径及其与工程实践环节的关联。
+
 
 
 % 图1////////////////////////////////////////////////////////
@@ -103,7 +116,7 @@
     \caption{EEG数据增强：演进脉络和工程实践路线图}
 
     % 标签（用于文中引用，如 \ref{fig:roadmap}）
-    \label{pic:1.3}
+    \label{pic:roadmap}
 \end{figure}
 
 
@@ -113,24 +126,19 @@
 
 % =============== 第2章 ===============
 \section{EEG数据增强的技术分类与演进}
-
-为清晰刻画技术演进脉络，本文将EEG数据增强方法划分为四大范式，其核心差异在于增强操作的生成性、语义性与集成深度：
+为清晰刻画技术演进脉络，本文将 EEG 数据增强方法划分为四大范式，其核心差异在于增强操作的生成性、语义性与集成深度：
 
 \begin{enumerate}[label={（\arabic*）}, leftmargin=*]
     \item \textbf{确定性增强}：通过预设的信号处理算子（如时移、频带交换）对单个样本进行可逆变换，不引入新语义，计算高效且生理可解释性强；
 
-    \item \textbf{正则化增强}：通过对两个或多个样本进行线性/非线性插值（如Mixup），在输入或特征空间构造“软样本”，以平滑决策边界，本质上是一种正则化策略；
+    \item \textbf{正则化增强}：通过对两个或多个样本进行线性/非线性插值（如 Mixup），在输入或特征空间构造 软样本 ，以平滑决策边界，本质上是一种正则化策略；
 
-    \item \textbf{概率生成增强}：通过学习真实数据分布 $P(X,Y)$，利用生成模型（如GAN、扩散模型）合成具有新语义的逼真样本，显著扩充数据多样性；
+    \item \textbf{概率生成增强}：通过学习真实数据分布 $P(X,Y)$ ，利用生成模型（如 GAN、扩散模型）合成具有新语义的逼真样本，显著扩充数据多样性；
 
     \item \textbf{隐式增强}：不再显式生成样本，而是将增强操作作为自监督预训练的代理任务（如对比学习中的视图构建），使模型在无标签数据中学习不变表示。
 \end{enumerate}
 
 下文将依此框架，系统剖析各类方法的技术细节、代表性工作与适用边界。这四大范式的逻辑关系与核心差异如图\ref{pic:2}所示。
-
-
-
-
 % 图2////////////////////////////////////////////////////////
 
 \begin{figure}[htbp] % htbp 表示尝试按 这里的(h)顶部(t)底部(b)独立一页(p) 的顺序放置
@@ -152,15 +160,15 @@
 
 
 \subsection{确定性增强：基于物理规则的显式变换}
-基于信号处理的确定性增强是EEG分析领域最早应用，也是目前工业界最为稳健的预处理与增强手段。该类方法不涉及对数据分布的统计学习，而是利用脑电信号在时域、频域或时频域的物理特性，通过预设的几何变换或信号处理算子生成新样本。Moghadam等\cite{moghadamDataCentricAIEEGBased2025}提出了“以数据为中心（Data-Centric AI）”的观点，其在SEED-VII数据集上的研究证明，即便是不改变模型架构，仅通过参与者引导的噪声过滤和系统性的确定性增强，也能取得优于复杂模型的性能，这确立了此类方法作为技术基石的地位。
+基于信号处理的确定性增强，是脑电图分析领域最早得到应用的数据增强范式，也是当前工业实践中最为稳健可靠的预处理与增强手段之一。该方法的核心在于不依赖于对数据分布的统计建模，而是依据脑电信号在时域、频域及时频域中所呈现的已知物理特性，通过预设的几何变换或确定性信号处理算子来生成新样本。Moghadam等人\cite{moghadamDataCentricAIEEGBased2025}所倡导的 以数据为中心的人工智能 理念与此高度契合，其在SEED-VII数据集上的实验表明，即使不改变模型架构，仅通过参与者引导的伪迹滤除与系统化的确定性增强，即可获得优于某些复杂模型的性能。这一发现进一步巩固了此类方法作为整个技术体系基石的工程地位。
 
-在时域层面，滑动窗口（Sliding Window）及其变体是解决长程信号切分与扩充的首选策略。叶晓雅等\cite{YeXiaoYaEEGMFNetGuaYongYuNaoDianXinHaoFenXiDeQingLiangJiDuoFenZhiRongHeWangLuo2025}在构建轻量级多分支融合网络（EEG-MFNet）时，利用滑动窗口技术有效解决了BCI数据集样本不足的问题，提升了模型对运动想象（MI）信号的解码能力。为了进一步挖掘时序信息，谷学静等\cite{GuXueJingRongHeZhuYiLiDeShuangFenZhiShiKongJuanJiNaoDianShiBieWangLuo2025}在双分支时空卷积网络中引入了改进的滑动窗口技术，配合注意力机制增强了特征表达；而Zhou等\cite{zhouAutoAugHARAutomatedData2024}则结合滑动窗口与时间卷积网络（TCN），通过增加训练样本的多样性，显著提升了MI任务的Kappa值。针对稳态视觉诱发电位（SSVEP）信号对数据长度的敏感性，Zhang等\cite{ZhangSiYuanMianXiangWenTaiShiJueYouFaDianWeiDeNaoJieMaGeTiGuaPeiXingJiShuYanJiu2025}提出了一种基于改进任务相关成分分析（TRCA）的数据长度适配方法，结合锁相时移的数据增强策略，有效解决了被试内和跨被试的神经响应差异问题。
+在时域层面，滑动窗口及其各类变体技术是应对长程信号分段与数据扩充需求的首选方法。叶晓雅等人\cite{YeXiaoYaEEGMFNetGuaYongYuNaoDianXinHaoFenXiDeQingLiangJiDuoFenZhiRongHeWangLuo2025}在构建轻量级多分支融合网络时，便借助滑动窗口技术有效缓解了脑机接口数据集样本数量不足的局限，从而提升了模型对运动想象信号的解码性能。谷学静等人\cite{GuXueJingRongHeZhuYiLiDeShuangFenZhiShiKongJuanJiNaoDianShiBieWangLuo2025}在其设计的双分支时空卷积网络中，引入了一种改进的滑动窗口策略，并结合注意力机制，共同强化了对信号的特征表达能力。同时，Zhou等人\cite{zhouAutoAugHARAutomatedData2024}通过将滑动窗口技术与时间卷积网络相结合，有效增加了训练样本的时序多样性，从而显著提升了运动想象任务的解码性能。另一方面，针对稳态视觉诱发电位（SSVEP）信号对数据长度高度敏感的特性，Zhang等人\cite{ZhangSiYuanMianXiangWenTaiShiJueYouFaDianWeiDeNaoJieMaGeTiGuaPeiXingJiShuYanJiu2025}提出了一种基于改进的任务相关成分分析（TRCA）框架的数据长度适配方法。该方法结合了锁相时移的数据增强策略，有效缓解了被试内及跨被试神经响应存在的差异性所导致的模型泛化难题
 
-在频域与变换域层面，增强操作旨在模拟信号的频谱扰动或重构，以提高模型对频带偏移的鲁棒性。Du等\cite{duDataAugmentationMethod2024}提出了一种基于时频域联合数据增强的多尺度特征融合算法，通过对ICA去噪后的信号分别进行时域和频域增强，并提取小波包能量特征，有效克服了小样本带来的分类不稳定性。更为精细的频域操作如Zheng等\cite{zhengMotorImageryEEG2025}提出的基于小波包分解（WPD）的合成增强策略，该方法利用WPD将信号分解为低方差的“稳定”分量和高方差的“变异”分量，并通过子带交换（Sub-band Swapping）生成保留了事件相关去同步/同步（ERD/ERS）特征的合成样本，在减少传感器数量的同时保持了高精度。
+在频域与变换域的增强策略层面，核心目标在于通过模拟信号在频谱上的合理扰动或特征重构，提升模型对频带偏移等变化的适应能力。为达成此目标，Du等人\cite{duDataAugmentationMethod2024}提出了一种时频域联合增强的多尺度特征融合算法。该方法首先对经独立成分分析（ICA）去噪后的信号，分别施加时域与频域的增强处理，随后从中提取小波包能量特征进行融合。这一综合方案有效缓解了因样本量有限而导致的分类性能波动问题。还有Zheng等人\cite{zhengMotorImageryEEG2025}提出的一种基于小波包分解的合成增强方法。该方法首先利用小波包分解将原始信号解构为低方差的稳定分量与高方差的动态分量。在此基础上，通过对不同子带成分进行有选择的交换与重组，能够生成在保留事件相关同步关键特征的同时，有效模拟信号内在变异的合成样本。这一方法在显著减少所需传感器数量的情况下，仍能维持较高的分类精度。
 
-此外，统计特性与多维重构也被引入增强流程。Liao等\cite{liaoEEGDataAugmentation2025}提出了一种基于高斯混合模型（GMM）的增强方法，通过分解同类样本并交换其概率系数加权的特征矩阵列向量，生成的信号在t-SNE可视化中显示出更紧凑的时空分布特性。在多感官研究中，Xia等\cite{XiaXiuXinJiYuShenDuXueXiDeXiuJueWeiJueYuLianJueNaoDianShuJuShiBieFangFaYanJiu2025}针对味觉脑电数据匮乏的问题，提出了时空重构数据增强方法，通过重构时空维度特征丰富了数据的多样性。值得注意的是，确定性增强往往是高性能现代架构的前置基础，例如Li等\cite{LiXiangJiYuCNNYuTransformerDeNaoDianJieMaYanJiu2025}提出的RCA-Conformer架构，虽然利用了Transformer的全局建模能力，但仍需依赖稳健的特征输入来防止过拟合，确定性增强在此类混合模型中扮演了至关重要的角色。
+此外，信号统计特性分析与多维重构技术也被引入增强流程。Liao等人\cite{liaoEEGDataAugmentation2025}提出了一种基于高斯混合模型的增强方法，其核心在于分解同类样本，并交换由概率系数加权的特征矩阵列向量，所生成的新样本在t-SNE可视化中呈现出更为紧凑的时空分布。在涉及多感官融合的研究中，Xia等人\cite{XiaXiuXinJiYuShenDuXueXiDeXiuJueWeiJueYuLianJueNaoDianShuJuShiBieFangFaYanJiu2025}针对味觉刺激EEG数据稀缺的难题，提出了一种时空重构数据增强方法，该方法通过对信号的时空维度特征进行解构与重组，有效丰富了训练数据的多样性。确定性增强往往是高性能现代架构的前置基础，例如 Li 等\cite{LiXiangJiYuCNNYuTransformerDeNaoDianJieMaYanJiu2025}提出的 RCA-Conformer 架构，虽然利用了 Transformer 的全局建模能力，但仍需依赖稳健的特征输入来防止过拟合，确定性增强在此类混合模型中至关重要。
 
-尽管确定性增强具备高稳定性与低计算开销的优势，但其本质是对原始信号流形的局部扰动，无法突破原始数据分布的边界。在极端小样本场景（如每类训练样本少于10个）或需要模拟显著个体差异的任务中，此类方法难以生成具有新语义信息的样本，泛化能力提升有限。因此，其更适合作为其他增强范式的基础预处理模块，而非独立解决方案。表 \ref{tab:2.1} 进一步总结并对比了主流确定性增强方法的操作逻辑与适用场景。
+尽管确定性增强具备高稳定性与低计算开销的优势，但其本质是对原始信号流形的局部扰动。在极端小样本场景或需要模拟显著个体差异的任务中，这种方法难以生成具有新语义信息的样本，泛化能力提升有限。因此，其更适合作为其他增强范式的基础预处理模块，而非独立解决方案。表 \ref{tab:2.1}   进一步总结并对比了主流确定性增强方法的操作逻辑与适用场景。
 
 
 % 图3//////////////////////////////////////////////////////////
@@ -227,17 +235,13 @@
 
 
 \subsection{正则化增强：基于样本间插值的软增强}
-为了突破单样本变换的局限性，技术范式向“样本间插值”演进。该范式引入了“混合（Mixup）”的概念，假设在特征空间或输入空间中，样本间的线性插值点仍然具有语义意义，从而通过软化标签（Label Smoothing）实现正则化。
+为了突破单样本变换的局限性，技术范式向样本间插值演进，该范式引入了混合（Mixup）的概念，假设在特征空间或输入空间中，样本间的线性插值点仍然具有语义意义，从而通过软化标签实现正则化。
 
-Mixup及其变体在处理类别不平衡和提升鲁棒性方面表现优异。He等\cite{HeHuanHuanJiYuNaoDianXinHaoDeShuJuZengQiangYuQingXuShiBieYanJiu2025}在癫痫发作检测的系统性研究中，深入评估了Mixup、SuperMix和Co-MixUp三种策略，发现Co-MixUp能最大化混合样本与源样本的显著性依赖，极大地缓解了长程EEG监测中的严重类别不平衡问题。在运动想象领域，Ding等\cite{duDataAugmentationMethod2024}将Mixup策略引入深度卷积网络（MixedCNN），实验表明经连续小波变换（CWT）处理后的样本结合Mixup，能使分类准确率提升至93.57\%。此外，Han等\cite{hanMSRLNetMultiSourceFusion2025}在针对ADHD的MSRLNet网络中，引入了特征级数据增强（Feature-level DA），在CNN-GRU提取的高维特征空间内进行扰动与混合，进一步验证了在特征流形上进行增强的有效性。
+Mixup 及其变体在处理类别不平衡和提升鲁棒性方面表现优异。He 等\cite{HeHuanHuanJiYuNaoDianXinHaoDeShuJuZengQiangYuQingXuShiBieYanJiu2025}在癫痫发作检测的系统性研究中，深入评估了 Mixup、SuperMix 和 Co-MixUp 三种策略，发现Co-MixUp 能最大化混合样本与源样本，极大地缓解了EEG 监测中严重的类别不平衡问题。在运动想象领域，Ding 等\cite{duDataAugmentationMethod2024}则将Mixup 策略引入了深度卷积网络MixedCNN，实验表明经连续小波变换（CWT）处理后的样本结合 Mixup，能使分类准确率提升至 93.57\%。此外，Han 等\cite{hanMSRLNetMultiSourceFusion2025}在针对 ADHD 的 MSRLNet 网络中，引入了特征级数据增强，在 CNN-GRU 提取的高维特征空间内进行扰动与混合，进一步验证了在特征流形上进行增强的有效性。
 
-多模态融合也可被视为一种广义的信息增强。Liao等\cite{liaoEEGDataAugmentation2025}提出的脑肌电（EEG-EMG）融合方法，通过注意力机制动态分配双模态权重，实际上是利用肌电信号增强了脑电信号在单侧肢体运动解码中的特征表达能力，弥补了单一模态的信息缺失。针对跨被试场景下的分布差异，Liu等\cite{LiuGuoRuiZiGuaYingEMDShuJuZengQiangHeHunHeChiDuCNNDeNaoDianXinHaoShiBie2022}提出了基于被试聚类（Subject Clustering）的域适应增强策略（DASC），通过将相似情感响应模式的被试聚类并在类内进行源域信息的灵活迁移，这种策略在逻辑上类似于在特定的“流形”上进行样本插值。
+多模态融合也是一种广义的信息增强。Liao 等\cite{liaoEEGDataAugmentation2025}提出的脑肌电（EEG-EMG）融合方法，通过注意力机制动态分配双模态权重，利用肌电信号增强了脑电信号在单侧肢体运动解码中的特征表达能力，弥补了单一模态的信息缺失。针对跨被试场景下的分布差异，Liu 等\cite{liGMSSGraphBasedMultiTask2023}提出了基于被试聚类的域适应增强策略，将相似情感响应模式的被试聚类并在类内进行源域信息的迁移，这种策略在逻辑上类似于在特定的流形上进行样本插值。
 
-随着增强策略的增多，自动化数据增强（AutoAugment） 成为新的趋势。Cubuk等\cite{cubukAutoAugmentLearningAugmentation2019}在图像领域的开创性工作启发了EEG研究者。Rommel等\cite{rommelCADDAClasswiseAutomatic2022}提出了CADDA（类可微自动数据增强），针对EEG信号特性设计了可微的增强操作搜索空间，实现了针对特定任务的最优策略自动搜索。类似地，Zhou等\cite{zhouAutoAugHARAutomatedData2024}提出的AutoAugHAR框架，设计了针对传感器数据的两阶段梯度优化流程，证明了自动化策略在跨被试泛化中具有超越人工设计策略的潜力。表\ref{tab:2.2}对混合插值与自动增强这两类正则化策略的原理与效果进行了对比展示。
-
-
-
-
+随着增强策略的增多，自动化数据增强应运而生。Cubuk 等\cite{cubukAutoAugmentLearningAugmentation2019}在图像领域的开创性工作启发了 EEG 研究者。Rommel 等\cite{rommelCADDAClasswiseAutomatic2022}提出了 CADDA（类可微自动数据增强），针对 EEG 信号特性设计了可微的增强操作搜索空间，实现了针对特定任务的最优策略自动搜索。类似地，Zhou 等提出的 AutoAugHAR 框架，设计了针对传感器数据的两阶段梯度优化流程，证明了自动化策略在跨被试泛化中具有超越人工设计策略的潜力。表\ref{tab:2.2}对混合插值与自动增强这两类正则化策略的原理与效果进行了对比展示。
 % 图4///////////////////////////////////////////////////////
 
 
@@ -295,15 +299,21 @@ Mixup及其变体在处理类别不平衡和提升鲁棒性方面表现优异。
 
 
 \subsection{概率生成增强：从GAN到扩散模型}
-概率生成增强旨在学习真实EEG数据的联合分布 $P(X,Y)$，并通过采样生成“未见过但逼真”的新样本。该范式主要包括生成对抗网络（GAN）与扩散模型（Diffusion Models）两大技术路线，二者在训练稳定性、生成质量与计算成本上存在显著差异。
+概率生成增强旨在学习真实 EEG 数据的联合分布 $P(X,Y)$，并通过采样生成新样本。该范式主要包括生成对抗网络与扩散模型两大技术路线，他们在训练稳定性、生成质量与计算成本上存在显著差异。
+
 
 \subsubsection{生成对抗网络（GAN）}
+GAN 及其变体是早期 EEG 生成的主流框架。Habashi 等\cite{habashiGenerativeAdversarialNetworks2023}的综述系统梳理了GAN 在运动想象、P300 及癫痫检测中的应用，Du 等\cite{duDataAugmentationMethod2024}提出基于 DCGAN-GP 的方法，将 EEG 转为二维时频图进行生成；Song 等\cite{songEEGGANNetEnhancingEEG2024} 进一步结合条件GAN 与 SE 注意力机制，实现类别可控生成，为提升特征解耦能力，InfoGAN 被引入MI 任务\cite{XiaoNanJiYuXinXiZuiDaHuaShengChengDuiKangWangLuoDeYunDongXiangXiangNaoDianXinHaoShuJuZengQiang2025}，此外，VAE-GAN 混合架构（如 SSVAE-CGAN\cite{YuanKaiFengJiYuBanJianDuVAEHeCGANDeYunDongXiangXiangNaoDianXinHaoFenLeiQi2025} 、DEVAE-GAN\cite{tianDualEncoderVAEGANSpatiotemporal2023}）通过双编码器分别建模时空潜在变量，在情感 EEG 生成中展现出更强的分布覆盖能力。
 
-GAN及其变体是早期EEG生成的主流框架。Habashi等\cite{habashiGenerativeAdversarialNetworks2023}的综述系统梳理了GAN在运动想象、P300及癫痫检测中的应用。为缓解模式崩塌问题，Du等\cite{duDataAugmentationMethod2024}提出基于DCGAN-GP的方法，将EEG转为二维时频图进行生成；Song等\cite{songEEGGANNetEnhancingEEG2024}进一步结合条件GAN与SE注意力机制，实现类别可控生成。为提升特征解耦能力，InfoGAN被引入MI任务，通过最大化互信息实现对ERD/ERS特征的显式控制\cite{XiaoNanJiYuXinXiZuiDaHuaShengChengDuiKangWangLuoDeYunDongXiangXiangNaoDianXinHaoShuJuZengQiang2025}。此外，VAE-GAN混合架构（如SSVAE-CGAN\cite{YuanKaiFengJiYuBanJianDuVAEHeCGANDeYunDongXiangXiangNaoDianXinHaoFenLeiQi2025}、DEVAE-GAN\cite{tianDualEncoderVAEGANSpatiotemporal2023}）通过双编码器分别建模时空潜在变量，在情感EEG生成中展现出更强的分布覆盖能力。
 
 然而，GAN在EEG生成中仍面临训练不稳定、梯度消失、评估困难三大瓶颈，尤其在高维时序信号上易出现高频噪声或相位失真，或在小批量EEG数据上易出现收敛困难。
 
 \subsubsection{扩散模型（Diffusion Models）}
+近年来，扩散模型凭借其训练稳定性高、样本多样性好、频谱保真度强等优势，逐渐成为 EEG 生成的新范式。Zhang 等构建基于 DDPM 的生成框架，在视觉刺激解码任，务中提升了9.56\%的准确率 ；Moghadam 等\cite{moghadamDataCentricAIEEGBased2025}提出的卷积注意力扩散模型（CADM）专门针对抑郁症检测中的小样本问题，生成的时频特征能有效增强 Transformer 的鲁棒性。在跨模态任务中，离散扩散模型首次被用于脑电到语音合成\cite{FangYuanJiYuShenDuXueXiDeEEGNaoDianTuXinHaoYuYinHeCheng}，克服了非侵入式信号质量低的挑战。
+
+
+
+
 
 近年来，扩散模型凭借其训练稳定性高、样本多样性好、频谱保真度强等优势，逐渐成为EEG生成的新范式。Zhang等构建基于DDPM的生成框架，在视觉刺激解码任务中提升准确率9.56\%；Moghadam等\cite{moghadamDataCentricAIEEGBased2025}提出的卷积注意力扩散模型（CADM），专门针对抑郁症检测中的小样本问题，生成的时频特征能有效增强Transformer的鲁棒性。在跨模态任务中，离散扩散模型首次被用于脑电到语音合成\cite{FangYuanJiYuShenDuXueXiDeEEGNaoDianTuXinHaoYuYinHeCheng}，克服了非侵入式信号质量低的挑战。
 
